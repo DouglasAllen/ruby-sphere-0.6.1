@@ -1,0 +1,71 @@
+.\"
+.\" Man page for visibility
+.\"
+.\" $Id: visibility.1,v 1.1 2005/01/29 04:37:22 tomono Exp $
+.\" Copyright (C) 2005 Daigo Tomono <dtomono at freeshell.org>
+.\"
+.\" Permission is granted for use, copying, modification, distribution,
+.\" and distribution of modified versions of this work under the terms
+.\" of GPL version 2 or any later version.
+.\"
+.TH visibility 1 "January 2005"
+.LO 1
+.SH NAME
+visibility \- plots a visibility map
+.SH SYNOPSIS
+.B visibility
+.RB [options]
+
+.SH DESCRIPTION
+.B ruby-sphere
+is an application to calculate apparent positions of stars with a
+moderate accuracy.
+.PP
+The
+.B visibility
+command is a user interface to plot visibility maps of targets.
+.PP
+Ruby and gnuplot are required.
+
+.SH OPTIONS
+.TP
+.B \-\^h \fRor\fP \-\-help
+prints help
+.TP
+.B \-\^v \fRor\fP \-\-version
+prints version
+.TP
+.B \-\^V
+prints version and copyright notice
+.TP
+.B \-\^c \fRor\fP \-\-config " file"
+reads configuration from FILE in addition to the standard ones
+
+.SH FILES
+Configuration files are read in the sequence listed below if exists.
+With the -c option, an additional configuration file is read from the path
+specified.
+
+.TP
+.B /etc/ruby-sphere.conf
+system wide configuration file
+.TP
+.B ~/.ruby-sphere.conf
+user specific configuration file
+.TP
+.B ./ruby-sphere.conf
+directory specific configuration file
+
+.SH ENVIRONMENT
+See RUBY(1)
+
+./" .SH DIAGNOSTICS
+
+.SH BUGS
+See the README.en file
+
+.SH AUTHOR
+Daigo Tomono <dtomono at freeshell.org>
+
+.SH SEE ALSO
+ruby-sphere.conf(5)

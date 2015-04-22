@@ -1,0 +1,117 @@
+# vim: set et ts=2 sw=2 tw=72:
+# $Id: README.en,v 1.19 2007/03/02 08:39:57 tomono Exp $
+=begin
+= ruby-sphere README
+
+((<ruby-sphere|URL:http://ruby-sphere.sourceforge.net>)) is an
+application to calculate apparent positions of stars with a moderate
+accuracy.
+
+== Requirements
+: Ruby 1.8 ((<URL:http://www.ruby-lang.org/>)) or newer.
+  optparse is required by bin/visibility.
+  Might also work on Ruby 1.6.x with ruby-sumo but not tested.
+: gnuplot ((<URL:http://www.gnuplot.info/>))
+  Visibility plot is created through gnuplot.
+
+== Download
+* Latest version at
+  ((<URL:http://sourceforge.net/project/showfiles.php?group_id=122091>)).
+* Cutting edge version via
+  ((<cvs|URL:http://sourceforge.net/cvs/?group_id=122091>)).
+
+== Install
+De-compress archive and enter its top directory.
+Then type:
+  ($ su)
+  # ruby setup.rb
+
+These simple step installs this program under the default location of
+Ruby libraries.  You can also install files into your favorite directory
+by supplying (({setup.rb})) some options. Try "((%ruby setup.rb --help%))".
+
+If you want to install the library under /usr/local, you might want to
+run
+  $ ruby setup.rb config --prefix=/usr/local --siteruby=/usr/local/lib/ruby/site_ruby
+  $ ruby setup.rb setup
+  # ruby setup.rb install
+
+=== Useful make targets
+Following targets are provided for users.
+Have a look in Makefile for other targets.
+
+: test (default)
+  run the tests
+: install/config/setup
+  same as "((%ruby setup.rb install%))", "((%ruby setup.rb config%))",
+  or "((%ruby setup.rb setup%))"
+: doc
+  create API document as HTML files in the doc/ directory
+
+== Usage
+Try
+  $ ruby -I./lib bin/visibility -c sample/planets.conf
+  $ ruby -I./lib sample/tonight.rb
+before installation or
+  $ visibility -c sample/planets.conf
+after installation.
+
+Please have a look in sample/planets.conf for a brief description of
+configuration files.
+
+You can also build your own
+applications referring ((<the API document|URL:index.html>)).
+
+== Contact
+Please report bugs and patches, request for features at ((<the SourceForge.net Trackers|URL:http://sourceforge.net/tracker/?group_id=122091>)).
+
+== Limitations
+The package currently aims to provide an easy-to-use way of planning
+observations. This is not suitable to acquire your target into your
+telescope field of view.
+
+=== Time scales
+* All calculations are done on J2000.0: Greenwich apparent sidereal time is
+  assumed to be the same as Greenwich mean sidereal time.
+* TT: terrestrial time is assumed to be the same as UTC: coordinated
+  universal time.
+
+=== Coordinates
+* Aberrations of light (20 arcsec for non-solar system objects):
+  * annual aberration,
+  * planetary aberration,
+  * differential aberration, and
+  * light-deflection,
+  nutation, and precession are not taken into account.
+
+=== Planets
+* Position precision of planets are more or less 0.01 degrees with no
+  perturbations taken into account.
+* Positions of the Moon, as long as other planets and stars, are calculated
+  with geocentric coordinates. The Moon as viewed from a place on the
+  earth is different up to +/- 1 degree.
+* Moon phase is calculated using geocentric coordinates.
+
+=== Conversions to Azimuth and Elevation
+* Atmospheric dispersion (35 arcmin at horizon) is not taken into account.
+* The earth is assumed to be perfectly spherical.
+
+== License
+Copyright (C) 2004 Daigo Tomono <dtomono at freeshell.org> unless
+otherwise stated.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+((<GNU General Public License|URL:GPL.txt>)) for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+=end

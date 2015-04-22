@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Sphere - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Math</span>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-astronomical_twilight_begin">::astronomical_twilight_begin</a>
+    
+    <li ><a href="#method-c-astronomical_twilight_end">::astronomical_twilight_end</a>
+    
+    <li ><a href="#method-c-az_at_el">::az_at_el</a>
+    
+    <li ><a href="#method-c-c1900">::c1900</a>
+    
+    <li ><a href="#method-c-civil_twilight_begin">::civil_twilight_begin</a>
+    
+    <li ><a href="#method-c-civil_twilight_end">::civil_twilight_end</a>
+    
+    <li ><a href="#method-c-distance">::distance</a>
+    
+    <li ><a href="#method-c-dms_to_rad">::dms_to_rad</a>
+    
+    <li ><a href="#method-c-dteph">::dteph</a>
+    
+    <li ><a href="#method-c-fjd">::fjd</a>
+    
+    <li ><a href="#method-c-gmst">::gmst</a>
+    
+    <li ><a href="#method-c-ha_at_el">::ha_at_el</a>
+    
+    <li ><a href="#method-c-ha_to_ra">::ha_to_ra</a>
+    
+    <li ><a href="#method-c-hms_to_rad">::hms_to_rad</a>
+    
+    <li ><a href="#method-c-jd">::jd</a>
+    
+    <li ><a href="#method-c-lst">::lst</a>
+    
+    <li ><a href="#method-c-lst_to_ut">::lst_to_ut</a>
+    
+    <li ><a href="#method-c-mfjd">::mfjd</a>
+    
+    <li ><a href="#method-c-mjd">::mjd</a>
+    
+    <li ><a href="#method-c-nautical_twilight_begin">::nautical_twilight_begin</a>
+    
+    <li ><a href="#method-c-nautical_twilight_end">::nautical_twilight_end</a>
+    
+    <li ><a href="#method-c-obliquity">::obliquity</a>
+    
+    <li ><a href="#method-c-pa">::pa</a>
+    
+    <li ><a href="#method-c-ra_to_ha">::ra_to_ha</a>
+    
+    <li ><a href="#method-c-rad_to_dms">::rad_to_dms</a>
+    
+    <li ><a href="#method-c-sidereal_day">::sidereal_day</a>
+    
+    <li ><a href="#method-c-sunrise">::sunrise</a>
+    
+    <li ><a href="#method-c-sunset">::sunset</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Sphere">
+  <h1 id="module-Sphere" class="module">
+    module Sphere
+  </h1>
+
+  <section class="description">
+    
+<p>alloction.rb: a class of allocated observation time</p>
+
+<p>$Id: allocation.rb,v 1.8 2006/05/17 05:51:07 tomono Exp $</p>
+<dl class="rdoc-list note-list"><dt>Copyright
+<dd>
+<p>Copyright (C) 2004 Daigo Tomono &lt;dtomono at freeshell.org&gt;</p>
+</dd><dt>License
+<dd>
+<p>GPL</p>
+</dd></dl>
+
+<p>version.rb: defines version and copyright notice</p>
+
+<p>$Id: version.rb,v 1.50 2007/03/01 05:25:55 tomono Exp $</p>
+<dl class="rdoc-list note-list"><dt>Copyright
+<dd>
+<p>Copyright (C) 2004 Daigo Tomono &lt;dtomono at freeshell.org&gt;</p>
+</dd><dt>License
+<dd>
+<p>GPL</p>
+</dd></dl>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="COPYRIGHT">COPYRIGHT
+        
+        <dd>
+        
+      
+        <dt id="COPYRIGHT_LONG">COPYRIGHT_LONG
+        
+        <dd>
+        
+      
+        <dt id="LICENSE">LICENSE
+        
+        <dd><p>copyright notices for this package</p>
+        
+      
+        <dt id="NAME">NAME
+        
+        <dd><p>package name</p>
+        
+      
+        <dt id="PKGNAME">PKGNAME
+        
+        <dd><p>package name and version</p>
+        
+      
+        <dt id="VERSION">VERSION
+        
+        <dd><p>release version/patch level of this package</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-astronomical_twilight_begin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">astronomical_twilight_begin</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of astronomical twilight begins before sunrise
+near <a href="Time.html">Time</a> from ( <code>time</code>,
+<code>lon</code>, <code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="astronomical_twilight_begin-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 615</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">astronomical_twilight_begin</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">rise_at</span>( <span class="ruby-value">-18</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-astronomical_twilight_end" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">astronomical_twilight_end</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of astronomical twilight ends after sunset
+near <a href="Time.html">Time</a> from ( <code>time</code>,
+<code>lon</code>, <code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="astronomical_twilight_end-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 621</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">astronomical_twilight_end</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_at</span>( <span class="ruby-value">-18</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-az_at_el" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">az_at_el</span><span
+            class="method-args">( lat, el, dec )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>azimuth (only plus) in radian from elevation and declination</p>
+          
+          
+
+          
+          <div class="method-source-code" id="az_at_el-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">az_at_el</span>( <span class="ruby-identifier">lat</span>, <span class="ruby-identifier">el</span>, <span class="ruby-identifier">dec</span> )
+  <span class="ruby-identifier">denom</span> = <span class="ruby-operator">-</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">lat</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">el</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-value">0.0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">denom</span>
+  <span class="ruby-identifier">f</span> = ( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">dec</span> ) <span class="ruby-operator">-</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">lat</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">el</span> ) ) <span class="ruby-operator">/</span> <span class="ruby-identifier">denom</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">abs</span>
+  <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">acos</span>( <span class="ruby-identifier">f</span> )
+  <span class="ruby-comment"># from &quot;Tentai-no Keisan Kyoushitsu&quot; 1998, Saida, Hiroshi, Chijin-shokan</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-c1900" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">c1900</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>number of centuries from AD1900 Jan 1 12:00 UT</p>
+          
+          
+
+          
+          <div class="method-source-code" id="c1900-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">c1900</span>( <span class="ruby-identifier">time</span> )
+  ( <span class="ruby-identifier">fjd</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">-</span> <span class="ruby-value">2415021.0</span> )<span class="ruby-operator">/</span><span class="ruby-value">36525.0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-civil_twilight_begin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">civil_twilight_begin</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of civil twilight begins before sunrise near
+<a href="Time.html">Time</a> from ( <code>time</code>, <code>lon</code>,
+<code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="civil_twilight_begin-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 589</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">civil_twilight_begin</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">rise_at</span>( <span class="ruby-value">-6</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-civil_twilight_end" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">civil_twilight_end</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of civil twilight ends after sunset near <a
+href="Time.html">Time</a> from ( <code>time</code>, <code>lon</code>,
+<code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="civil_twilight_end-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 595</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">civil_twilight_end</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_at</span>( <span class="ruby-value">-6</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-distance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">distance</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>distance on the sphere between two points in radias from ( az1, el1, az2,
+el2 ) or two instances of same coordinate system</p>
+          
+          
+
+          
+          <div class="method-source-code" id="distance-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">distance</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-value">4</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">az1</span>, <span class="ruby-identifier">el1</span>, <span class="ruby-identifier">az2</span>, <span class="ruby-identifier">el2</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;instances of different class&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">class</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">class</span>
+    <span class="ruby-identifier">az1</span>, <span class="ruby-identifier">el1</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">long_and_lat</span>
+    <span class="ruby-identifier">az2</span>, <span class="ruby-identifier">el2</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">long_and_lat</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;wrong number of arguments(#{args.size} for 2 or 4)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">del1</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">el1</span>
+  <span class="ruby-identifier">del2</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">el2</span>
+  <span class="ruby-identifier">daz</span> = <span class="ruby-identifier">az2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">az1</span>
+  <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">acos</span>(                <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">del1</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">del2</span> ) <span class="ruby-operator">+</span>                 <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">del1</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">del2</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">daz</span> ) )
+  <span class="ruby-comment"># from &quot;Tentai-no Keisan Kyoushitsu&quot; 1998, Saida, Hiroshi, Chijin-shokan</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-dms_to_rad" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dms_to_rad</span><span
+            class="method-args">( str )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>returns radians converted from DD:MM:SS, throws a RuntimeError when
+<code>str</code> can not be converted.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="dms_to_rad-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">dms_to_rad</span>( <span class="ruby-identifier">str</span> )
+  <span class="ruby-identifier">a</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/s/</span>, <span class="ruby-string">&#39;.&#39;</span> ).<span class="ruby-identifier">scan</span>( <span class="ruby-regexp">/([\+\-])?([\d\.]+)/</span> ).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-&#39;</span>
+    <span class="ruby-identifier">sign</span> = <span class="ruby-value">-1</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;+&#39;</span>
+    <span class="ruby-identifier">sign</span> = <span class="ruby-value">+1</span>
+    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">sign</span> = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;`#{str}&#39; can not be parsed&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">num</span> = ( <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">?</span>( <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_f</span> )<span class="ruby-operator">:</span><span class="ruby-value">0.0</span> )<span class="ruby-operator">+</span>        ( <span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">?</span>( <span class="ruby-identifier">a</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_f</span> )<span class="ruby-operator">:</span><span class="ruby-value">0.0</span> )<span class="ruby-operator">/</span><span class="ruby-value">60.0</span><span class="ruby-operator">+</span>        ( <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>]<span class="ruby-operator">?</span>( <span class="ruby-identifier">a</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_f</span> )<span class="ruby-operator">:</span><span class="ruby-value">0.0</span> )<span class="ruby-operator">/</span><span class="ruby-value">3600.0</span>
+  <span class="ruby-identifier">sign</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">num</span>.<span class="ruby-identifier">to_rad</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-dteph" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dteph</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Teph - TT (days) for a given <a href="Time.html">Time</a> from Astronomical
+Almanac 2004</p>
+          
+          
+
+          
+          <div class="method-source-code" id="dteph-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">dteph</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">g</span> = <span class="ruby-value">357.53</span>.<span class="ruby-identifier">to_rad</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.9856003</span>.<span class="ruby-identifier">to_rad</span><span class="ruby-operator">*</span>( <span class="ruby-identifier">fjd</span>(<span class="ruby-identifier">time</span>) <span class="ruby-operator">-</span> <span class="ruby-value">2451545.0</span> )
+  <span class="ruby-value">0.001658</span><span class="ruby-operator">/</span><span class="ruby-value">3600</span><span class="ruby-operator">/</span><span class="ruby-value">15</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">g</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-fjd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fjd</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Julian date for <a href="Time.html">Time</a> or Date including time within
+a day</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fjd-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">fjd</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">respond_to?</span>( <span class="ruby-string">&#39;utc&#39;</span> ) <span class="ruby-keyword">then</span>   <span class="ruby-comment"># Time</span>
+    <span class="ruby-comment"># from Japanese ephemeris 2005</span>
+    <span class="ruby-identifier">utc</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">utc</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">tmonth</span> = ( (<span class="ruby-value">14.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m</span>) <span class="ruby-operator">/</span> <span class="ruby-value">12.0</span> ).<span class="ruby-identifier">floor</span>
+    ( ( <span class="ruby-operator">-</span><span class="ruby-identifier">tmonth</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">4800.0</span> )<span class="ruby-operator">*</span><span class="ruby-value">1461.0</span><span class="ruby-operator">/</span><span class="ruby-value">4.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">+</span> ( ( <span class="ruby-identifier">tmonth</span><span class="ruby-operator">*</span><span class="ruby-value">12</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span> )<span class="ruby-operator">*</span><span class="ruby-value">367.0</span><span class="ruby-operator">/</span><span class="ruby-value">12.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">-</span> ( ( ( <span class="ruby-operator">-</span><span class="ruby-identifier">tmonth</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">4900.0</span> )<span class="ruby-operator">/</span><span class="ruby-value">100</span> ).<span class="ruby-identifier">floor</span><span class="ruby-operator">*</span><span class="ruby-value">3.0</span><span class="ruby-operator">/</span><span class="ruby-value">4.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">+</span> <span class="ruby-identifier">d</span>          <span class="ruby-operator">+</span> <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">hour</span> <span class="ruby-operator">/</span> <span class="ruby-value">24.0</span>          <span class="ruby-operator">+</span> <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">/</span> (<span class="ruby-value">24.0</span><span class="ruby-operator">*</span><span class="ruby-value">60.0</span>)          <span class="ruby-operator">+</span> <span class="ruby-identifier">utc</span>.<span class="ruby-identifier">sec</span> <span class="ruby-operator">/</span> (<span class="ruby-value">24.0</span><span class="ruby-operator">*</span><span class="ruby-value">3600.0</span>) <span class="ruby-operator">-</span> <span class="ruby-value">32075.5</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">respond_to?</span>( <span class="ruby-string">&#39;ajd&#39;</span> ) <span class="ruby-keyword">then</span>        <span class="ruby-comment"># Date</span>
+    <span class="ruby-identifier">time</span>.<span class="ruby-identifier">ajd</span>.<span class="ruby-identifier">to_f</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{time.inspect} cannot be converted to Julian day&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-gmst" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gmst</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Greenwith mean sidereal time in radians for a <a href="Time.html">Time</a>
+from Astronomical Almanac 2004 for J2000.0</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gmst-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">gmst</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">tu</span> = ( <span class="ruby-identifier">jd</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">-</span> <span class="ruby-value">2451545.0</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">36525.0</span>
+  <span class="ruby-identifier">ut0h</span> = <span class="ruby-value">24110.54841</span>        <span class="ruby-operator">+</span> <span class="ruby-value">8640184.812866</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">tu</span>        <span class="ruby-operator">+</span> <span class="ruby-value">0.093104</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">tu</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>        <span class="ruby-operator">+</span> <span class="ruby-value">0.0000062</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">tu</span><span class="ruby-operator">**</span><span class="ruby-value">3</span>       <span class="ruby-comment"># seconds</span>
+  <span class="ruby-identifier">sti</span> = ( <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">%</span> (<span class="ruby-value">3600</span><span class="ruby-operator">*</span><span class="ruby-value">24</span>) ) <span class="ruby-operator">*</span> <span class="ruby-value">1.0027379094</span>      <span class="ruby-comment"># seconds</span>
+  <span class="ruby-comment"># equivalent mean sidereal time interval</span>
+  ( ( ( <span class="ruby-identifier">ut0h</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sti</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">3600.0</span> <span class="ruby-operator">/</span> <span class="ruby-value">24.0</span> ) <span class="ruby-operator">%</span> <span class="ruby-value">1.0</span> ) <span class="ruby-operator">*</span> <span class="ruby-value">2.0</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-ha_at_el" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ha_at_el</span><span
+            class="method-args">( lat, el, dec )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>hour angle (only plus) in radian from elevation and declination</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ha_at_el-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">ha_at_el</span>( <span class="ruby-identifier">lat</span>, <span class="ruby-identifier">el</span>, <span class="ruby-identifier">dec</span> )
+  <span class="ruby-identifier">denom</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">lat</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">dec</span> )
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-value">0.0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">denom</span>
+  <span class="ruby-identifier">f</span> = ( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">el</span> ) <span class="ruby-operator">-</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">lat</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">dec</span> ) ) <span class="ruby-operator">/</span> <span class="ruby-identifier">denom</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">abs</span>
+  <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">acos</span>( <span class="ruby-identifier">f</span> )
+  <span class="ruby-comment"># from &quot;Tentai-no Keisan Kyoushitsu&quot; 1998, Saida, Hiroshi, Chijin-shokan</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-ha_to_ra" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ha_to_ra</span><span
+            class="method-args">( ha, lst )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>right accension in radians from hour angle and local sidereal time (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ha_to_ra-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">ha_to_ra</span>( <span class="ruby-identifier">ha</span>, <span class="ruby-identifier">lst</span> )
+  ( <span class="ruby-identifier">ha</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lst</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-value">2.0</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-hms_to_rad" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hms_to_rad</span><span
+            class="method-args">( str )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>returns radians converted from HH:MM:SS</p>
+          
+          
+
+          
+          <div class="method-source-code" id="hms_to_rad-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">hms_to_rad</span>( <span class="ruby-identifier">str</span> )
+  <span class="ruby-constant">Sphere</span><span class="ruby-operator">::</span><span class="ruby-identifier">dms_to_rad</span>( <span class="ruby-identifier">str</span> ) <span class="ruby-operator">*</span> <span class="ruby-value">15.0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-jd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">jd</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Julian date for <a href="Time.html">Time</a> or Date at UT 0h</p>
+          
+          
+
+          
+          <div class="method-source-code" id="jd-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">jd</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">respond_to?</span>( <span class="ruby-string">&#39;utc&#39;</span> ) <span class="ruby-keyword">then</span>   <span class="ruby-comment"># Time</span>
+    <span class="ruby-comment"># from Japanese ephemeris 2005</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_f</span>
+    <span class="ruby-identifier">tmonth</span> = ( (<span class="ruby-value">14.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m</span>) <span class="ruby-operator">/</span> <span class="ruby-value">12.0</span> ).<span class="ruby-identifier">floor</span>
+    ( ( <span class="ruby-operator">-</span><span class="ruby-identifier">tmonth</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">4800.0</span> )<span class="ruby-operator">*</span><span class="ruby-value">1461.0</span><span class="ruby-operator">/</span><span class="ruby-value">4.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">+</span> ( ( <span class="ruby-identifier">tmonth</span><span class="ruby-operator">*</span><span class="ruby-value">12</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span> )<span class="ruby-operator">*</span><span class="ruby-value">367.0</span><span class="ruby-operator">/</span><span class="ruby-value">12.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">-</span> ( ( ( <span class="ruby-operator">-</span><span class="ruby-identifier">tmonth</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">4900.0</span> )<span class="ruby-operator">/</span><span class="ruby-value">100</span> ).<span class="ruby-identifier">floor</span><span class="ruby-operator">*</span><span class="ruby-value">3.0</span><span class="ruby-operator">/</span><span class="ruby-value">4.0</span> ).<span class="ruby-identifier">floor</span>          <span class="ruby-operator">+</span> <span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-value">32075.5</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">respond_to?</span>( <span class="ruby-string">&#39;jd&#39;</span> ) <span class="ruby-keyword">then</span> <span class="ruby-comment"># Date</span>
+    <span class="ruby-identifier">time</span>.<span class="ruby-identifier">jd</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">-</span> <span class="ruby-value">0.5</span>        <span class="ruby-comment"># Date::jd is for noon UT</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{time.inspect} cannot be converted to Julian day&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-lst" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lst</span><span
+            class="method-args">( time, lon )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>local sidereal time in radians for <a href="Time.html">Time</a> and
+longitude (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="lst-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">lst</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span> )
+  ( <span class="ruby-identifier">gmst</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">+</span> <span class="ruby-identifier">lon</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-value">2.0</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-lst_to_ut" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lst_to_ut</span><span
+            class="method-args">( time, lst, lon )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>UT at a given LST near <a href="Time.html">Time</a> at londitude (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="lst_to_ut-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">lst_to_ut</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lst</span>, <span class="ruby-identifier">lon</span> )
+  <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>( <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> ( <span class="ruby-identifier">lst</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">lst</span>( <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span> ) ).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">*</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">sidereal_day</span> <span class="ruby-operator">*</span> <span class="ruby-value">3600.0</span> <span class="ruby-operator">*</span> <span class="ruby-value">12.0</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-mfjd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mfjd</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>modified Julian date for <a href="Time.html">Time</a> or Date including
+time within a day</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mfjd-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">mfjd</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">fjd</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">-</span> <span class="ruby-value">2400000.5</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-mjd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mjd</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>modified Julian date for <a href="Time.html">Time</a> or Date at UT 0h</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mjd-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">mjd</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">jd</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">-</span> <span class="ruby-value">2400000.5</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-nautical_twilight_begin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">nautical_twilight_begin</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of nautical twilight begins before sunrise
+near <a href="Time.html">Time</a> from ( <code>time</code>,
+<code>lon</code>, <code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="nautical_twilight_begin-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 602</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">nautical_twilight_begin</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">rise_at</span>( <span class="ruby-value">-12</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-nautical_twilight_end" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">nautical_twilight_end</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of nautical twilight ends after sunset near <a
+href="Time.html">Time</a> from ( <code>time</code>, <code>lon</code>,
+<code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="nautical_twilight_end-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 608</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">nautical_twilight_end</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_at</span>( <span class="ruby-value">-12</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-obliquity" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">obliquity</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>obliquity of the ecliptic from “Ko-tenmongaku” 1989, Saito, Kuniji,
+Kousei-sha</p>
+          
+          
+
+          
+          <div class="method-source-code" id="obliquity-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">obliquity</span>( <span class="ruby-identifier">time</span> )
+  ( <span class="ruby-value">23.452</span>  <span class="ruby-operator">-</span> <span class="ruby-value">0.013012</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">c1900</span>( <span class="ruby-identifier">time</span> ) ).<span class="ruby-identifier">to_rad</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-pa" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pa</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>position angle (angle from north/zenith to east/right) of point1 seen from
+point0 in radius from ( az0, el0, az1, el1 ) or two instances of same
+coordiante system</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pa-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">pa</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-value">4</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">ra1</span>, <span class="ruby-identifier">dec1</span>, <span class="ruby-identifier">ra2</span>, <span class="ruby-identifier">dec2</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;instances of different class&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">class</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">class</span>
+    <span class="ruby-identifier">ra0</span>, <span class="ruby-identifier">dec0</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">long_and_lat</span>
+    <span class="ruby-identifier">ra1</span>, <span class="ruby-identifier">dec1</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">long_and_lat</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;wrong number of arguments(#{args.size} for 2 or 4)&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dec0</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">ra0</span>, <span class="ruby-identifier">ra1</span> = <span class="ruby-identifier">ra1</span>, <span class="ruby-identifier">ra0</span>
+    <span class="ruby-identifier">dec0</span>, <span class="ruby-identifier">dec1</span> = <span class="ruby-identifier">dec1</span>, <span class="ruby-identifier">dec0</span>
+    <span class="ruby-identifier">swapped</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">swapped</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ddec0</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">dec0</span>
+  <span class="ruby-identifier">ddec1</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">dec1</span>
+  <span class="ruby-identifier">dra</span> = <span class="ruby-identifier">ra1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ra0</span>
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">acos</span>(                    <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">ddec0</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">ddec1</span> ) <span class="ruby-operator">+</span>                     <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">ddec0</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">ddec1</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">dra</span> ) )     <span class="ruby-comment"># distance</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;cannot calculate PA of the same poision&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">r</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(                     <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">ddec1</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">dra</span>)<span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">d</span>),                     (<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">ddec1</span>) <span class="ruby-operator">-</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">ddec0</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">d</span>))<span class="ruby-operator">/</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">ddec0</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">d</span>))                    )
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">swapped</span>  <span class="ruby-comment"># turn around 180 degrees</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">r</span> <span class="ruby-operator">-=</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-ra_to_ha" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ra_to_ha</span><span
+            class="method-args">( ra, lst )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>hour angle in radians from right accension (rad) and local sidereal time
+(rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ra_to_ha-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">ra_to_ha</span>( <span class="ruby-identifier">ra</span>, <span class="ruby-identifier">lst</span> )
+  ( <span class="ruby-identifier">ra</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">lst</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-value">2.0</span> <span class="ruby-operator">*</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-rad_to_dms" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rad_to_dms</span><span
+            class="method-args">( rad, prec = 0, postfix = nil, prefix = ['+', '-'] )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>returns DD:MM:SS from radians with prec: number of figures in fraction,
+postfix: [0] for plus and [1] for minus when supplied, and prefix: [0] for
+plus ad [1] for minus, which are usually sign (+ or -).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rad_to_dms-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">rad_to_dms</span>( <span class="ruby-identifier">rad</span>, <span class="ruby-identifier">prec</span> = <span class="ruby-value">0</span>, <span class="ruby-identifier">postfix</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">prefix</span> = [<span class="ruby-string">&#39;+&#39;</span>, <span class="ruby-string">&#39;-&#39;</span>] )
+  <span class="ruby-identifier">deg</span> = <span class="ruby-identifier">rad</span><span class="ruby-operator">*</span><span class="ruby-value">180.0</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">deg</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">postfix</span>
+      <span class="ruby-identifier">sign</span> = <span class="ruby-identifier">prefix</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-identifier">post</span> = <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">sign</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-identifier">post</span> = <span class="ruby-identifier">postfix</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">postfix</span>
+      <span class="ruby-identifier">sign</span> = <span class="ruby-identifier">prefix</span>[<span class="ruby-value">1</span>]
+      <span class="ruby-identifier">post</span> = <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">sign</span> = <span class="ruby-string">&#39;&#39;</span>
+      <span class="ruby-identifier">post</span> = <span class="ruby-identifier">postfix</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">deg</span> <span class="ruby-operator">*=</span> <span class="ruby-value">-1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">d</span>, <span class="ruby-identifier">deg</span> = <span class="ruby-identifier">deg</span>.<span class="ruby-identifier">divmod</span>( <span class="ruby-value">1.0</span> )
+  <span class="ruby-identifier">deg</span> <span class="ruby-operator">*=</span> <span class="ruby-value">60</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">prec</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">m</span>, <span class="ruby-identifier">deg</span> = <span class="ruby-identifier">deg</span>.<span class="ruby-identifier">divmod</span>( <span class="ruby-value">1.0</span> )
+    <span class="ruby-identifier">deg</span> <span class="ruby-operator">*=</span> <span class="ruby-value">60</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">deg</span>
+    <span class="ruby-identifier">format</span> = <span class="ruby-identifier">prec</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;%02.0f&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;%0#{prec + 3}.#{prec}f&quot;</span>
+    <span class="ruby-identifier">sstr</span> = <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sstr</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">60</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">s</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">sstr</span> = <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">s</span>
+      <span class="ruby-identifier">m</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sstr</span> = <span class="ruby-string">&#39;:&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sstr</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">deg</span>
+    <span class="ruby-identifier">sstr</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">mstr</span> = <span class="ruby-string">&#39;%02.0f&#39;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">m</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mstr</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">60</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">mstr</span> = <span class="ruby-string">&#39;%02.0f&#39;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">m</span>
+    <span class="ruby-identifier">d</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">dstr</span> = <span class="ruby-string">&#39;%02.0f&#39;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">d</span>
+  <span class="ruby-node">&quot;#{sign}#{dstr}:#{mstr}#{sstr}#{post}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-sidereal_day" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sidereal_day</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>1 sidereal day in unit of UT day</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sidereal_day-source">
+            <pre><span class="ruby-comment"># File lib/sphere/azel.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">sidereal_day</span>
+  <span class="ruby-value">0.9972695663</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-sunrise" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sunrise</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of sunrise near <a href="Time.html">Time</a>
+from ( <code>time</code>, <code>lon</code>, <code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sunrise-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 577</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">sunrise</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">rise_at</span>( <span class="ruby-value">-0.8333</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-sunset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sunset</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Time.html">Time</a> of sunset near <a href="Time.html">Time</a>
+from ( <code>time</code>, <code>lon</code>, <code>lat</code> )</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sunset-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 582</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">sunset</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> = <span class="ruby-constant">MethodArgs</span><span class="ruby-operator">::</span><span class="ruby-identifier">args_to_time_lon_lat</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+  <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">set_at</span>( <span class="ruby-value">-0.8333</span>.<span class="ruby-identifier">to_rad</span>, <span class="ruby-identifier">time</span>, <span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

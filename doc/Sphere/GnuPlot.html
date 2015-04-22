@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Sphere::GnuPlot - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-escape">::escape</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-create_datafiles">#create_datafiles</a>
+    
+    <li ><a href="#method-i-create_plotfile">#create_plotfile</a>
+    
+    <li ><a href="#method-i-data_filename">#data_filename</a>
+    
+    <li ><a href="#method-i-frame_legend">#frame_legend</a>
+    
+    <li ><a href="#method-i-multiplot">#multiplot</a>
+    
+    <li ><a href="#method-i-multiplot_polarplot">#multiplot_polarplot</a>
+    
+    <li ><a href="#method-i-multiplot_setups">#multiplot_setups</a>
+    
+    <li ><a href="#method-i-multiplot_timeplot">#multiplot_timeplot</a>
+    
+    <li ><a href="#method-i-plot">#plot</a>
+    
+    <li ><a href="#method-i-plot_filename">#plot_filename</a>
+    
+    <li ><a href="#method-i-polar_plot">#polar_plot</a>
+    
+    <li ><a href="#method-i-polar_plot_plots">#polar_plot_plots</a>
+    
+    <li ><a href="#method-i-polar_plot_setups">#polar_plot_setups</a>
+    
+    <li ><a href="#method-i-polar_timestamps">#polar_timestamps</a>
+    
+    <li ><a href="#method-i-store_file">#store_file</a>
+    
+    <li ><a href="#method-i-store_files">#store_files</a>
+    
+    <li ><a href="#method-i-time_plot">#time_plot</a>
+    
+    <li ><a href="#method-i-time_plot_plots">#time_plot_plots</a>
+    
+    <li ><a href="#method-i-time_plot_setups">#time_plot_setups</a>
+    
+    <li ><a href="#method-i-time_plot_twilights">#time_plot_twilights</a>
+    
+    <li ><a href="#method-i-time_timestamps">#time_timestamps</a>
+    
+    <li ><a href="#method-i-timestamp_pt">#timestamp_pt</a>
+    
+    <li ><a href="#method-i-visible_stars">#visible_stars</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Sphere::GnuPlot">
+  <h1 id="class-Sphere::GnuPlot" class="class">
+    class Sphere::GnuPlot
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="AZELFORMAT">AZELFORMAT
+        
+        <dd>
+        
+      
+        <dt id="DAT_INTERVAL">DAT_INTERVAL
+        
+        <dd><p>interval</p>
+        
+      
+        <dt id="DEF_MINIMUM_EL">DEF_MINIMUM_EL
+        
+        <dd><p>default settings on Az plot</p>
+        
+      
+        <dt id="EXT_DAT">EXT_DAT
+        
+        <dd><p>extensions for data files</p>
+        
+      
+        <dt id="FILE_UNSAFE">FILE_UNSAFE
+        
+        <dd>
+        
+      
+        <dt id="INITIAL_TAG_NUM">INITIAL_TAG_NUM
+        
+        <dd><p>labels</p>
+        
+      
+        <dt id="LABEL_INTERVAL">LABEL_INTERVAL
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-az_center" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">az_center</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-az_halfwidth" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">az_halfwidth</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-directory" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">directory</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-el_max" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">el_max</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-el_min" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">el_min</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-stars" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">stars</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-stars_visible" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">stars_visible</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-escape" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">escape</span><span
+            class="method-args">( str )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>escapes double quates for gnuplot</p>
+          
+          
+
+          
+          <div class="method-source-code" id="escape-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">escape</span>( <span class="ruby-identifier">str</span> )
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/&quot;/</span>, <span class="ruby-string">&#39;\&quot;&#39;</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">( allocation, binpath = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">allocation</span>, <span class="ruby-identifier">binpath</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-ivar">@allocation</span> = <span class="ruby-identifier">allocation</span>
+  <span class="ruby-ivar">@observatory</span> = <span class="ruby-identifier">allocation</span>.<span class="ruby-identifier">observatory</span>
+  <span class="ruby-ivar">@el_min</span> = <span class="ruby-constant">DEF_MINIMUM_EL</span>
+  <span class="ruby-ivar">@el_max</span> = <span class="ruby-value">90</span>.<span class="ruby-identifier">to_rad</span>
+  <span class="ruby-ivar">@az_center</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@az_halfwidth</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@stars</span> = []
+  <span class="ruby-ivar">@stars_visible</span> = []
+  <span class="ruby-ivar">@directory</span> = <span class="ruby-constant">TempDir</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>( <span class="ruby-identifier">$0</span>, <span class="ruby-string">&#39;.rb&#39;</span> ) )
+  <span class="ruby-ivar">@tag_num</span> = <span class="ruby-constant">INITIAL_TAG_NUM</span>
+  <span class="ruby-ivar">@binpath</span> = <span class="ruby-identifier">binpath</span>
+  <span class="ruby-ivar">@timeformat</span> = <span class="ruby-string">&#39;%Y/%m/%d-%H:%M:%S&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_datafiles" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_datafiles</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_datafiles-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_datafiles</span>
+  <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">star</span>, <span class="ruby-identifier">istar</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@directory</span>, <span class="ruby-identifier">data_filename</span>( <span class="ruby-identifier">star</span> ) )
+    <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>( <span class="ruby-identifier">path</span> ) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">space</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">star</span>.<span class="ruby-identifier">col_time_format</span> = <span class="ruby-ivar">@timeformat</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;w&#39;</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dst</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">puts</span>( <span class="ruby-identifier">star</span>.<span class="ruby-identifier">cols_comment</span>( <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">tz</span> ) )
+        <span class="ruby-comment"># scan through allocated time</span>
+        <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">each_sec</span>( <span class="ruby-constant">DAT_INTERVAL</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">time</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_lst</span>( <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lon</span> )
+          <span class="ruby-identifier">azel</span> = <span class="ruby-identifier">star</span>.<span class="ruby-identifier">radec</span>( <span class="ruby-identifier">time</span> ).<span class="ruby-identifier">to_azel</span>( <span class="ruby-identifier">lst</span>, <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lat</span> )
+          <span class="ruby-keyword">unless</span> <span class="ruby-identifier">_azel_visible?</span>( <span class="ruby-identifier">azel</span>, <span class="ruby-value">5</span>.<span class="ruby-identifier">to_rad</span> ) <span class="ruby-keyword">then</span>
+            <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">puts</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">space</span>
+            <span class="ruby-identifier">space</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">puts</span>( <span class="ruby-identifier">star</span>.<span class="ruby-identifier">cols</span>( <span class="ruby-identifier">time</span>, <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lon</span>, <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lat</span> ) )
+            <span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+            <span class="ruby-identifier">space</span> = <span class="ruby-keyword">false</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@stars_visible</span>[<span class="ruby-identifier">istar</span>] = <span class="ruby-identifier">visible</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_plotfile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_plotfile</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_plotfile-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_plotfile</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@directory</span>, <span class="ruby-identifier">plot_filename</span> ), <span class="ruby-string">&#39;w&#39;</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">print</span>( <span class="ruby-identifier">multiplot</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-data_filename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">data_filename</span><span
+            class="method-args">( star )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="data_filename-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">data_filename</span>( <span class="ruby-identifier">star</span> )
+  <span class="ruby-constant">URI</span>.<span class="ruby-identifier">escape</span>( <span class="ruby-identifier">star</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">FILE_UNSAFE</span> ) <span class="ruby-operator">+</span> <span class="ruby-constant">EXT_DAT</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_legend" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">frame_legend</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="frame_legend-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_legend</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;#{@allocation.from.localtime.strftime( &#39;%Y/%m/%d %H:%M&#39; )} - #{@allocation.to.localtime.strftime( &#39;%m/%d %H:%M %Z&#39; )}\\n#{@allocation.comment ? &#39;on &#39; + @allocation.comment + &#39;\\n&#39; : &#39;&#39;}from #{@observatory.comment ? @observatory.comment + &#39; at &#39; : &#39;&#39;}#{@observatory.coord}&quot;</span>
+  <span class="ruby-identifier">header</span> = <span class="ruby-node">%Q|set label #{@tag_num} &quot;#{GnuPlot::escape( text )}&quot; at screen 0.95, screen 0.95 right\n|</span>
+  <span class="ruby-identifier">footer</span> = <span class="ruby-node">%Q|unset label #{@tag_num}\n|</span>
+  <span class="ruby-ivar">@tag_num</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  [ <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-multiplot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multiplot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="multiplot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multiplot</span>
+  <span class="ruby-ivar">@tag_num</span> = <span class="ruby-constant">INITIAL_TAG_NUM</span>
+  <span class="ruby-identifier">lheader</span>, <span class="ruby-identifier">lfooter</span> = <span class="ruby-identifier">frame_legend</span>
+  <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> = <span class="ruby-identifier">multiplot_setups</span>
+  <span class="ruby-identifier">body</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># time plot</span>
+  <span class="ruby-identifier">theader</span>, <span class="ruby-identifier">tfooter</span> = <span class="ruby-identifier">multiplot_timeplot</span>
+  <span class="ruby-identifier">body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">theader</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">time_plot</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tfooter</span>
+  <span class="ruby-comment"># polar plot</span>
+  <span class="ruby-identifier">pheader</span>, <span class="ruby-identifier">pfooter</span> = <span class="ruby-identifier">multiplot_polarplot</span>
+  <span class="ruby-identifier">body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">pheader</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">polar_plot</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pfooter</span>
+  <span class="ruby-comment">#</span>
+  [<span class="ruby-identifier">lheader</span>, <span class="ruby-identifier">header</span>, <span class="ruby-identifier">body</span>, <span class="ruby-identifier">footer</span>, <span class="ruby-identifier">lfooter</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\n\n+/</span>, <span class="ruby-string">&quot;\n\n&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-multiplot_polarplot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multiplot_polarplot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="multiplot_polarplot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multiplot_polarplot</span>
+  [ <span class="ruby-node">&quot;# polar plot\nset origin 0.65,0\nset size 0.35,1\n&quot;</span>, <span class="ruby-string">&#39;&#39;</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-multiplot_setups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multiplot_setups</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="multiplot_setups-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 317</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier">multiplot_setups</span>
+        <span class="ruby-identifier">header</span> =<span class="ruby-value">&lt;&lt;&#39;_END&#39;
+set size 1, 1
+set multiplot
+_END</span>
+      <span class="ruby-identifier">footer</span> =<span class="ruby-value">&lt;&lt;&#39;_END&#39;
+unset multiplot
+unset size
+_END</span>
+      [ <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> ]
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-multiplot_timeplot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multiplot_timeplot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="multiplot_timeplot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multiplot_timeplot</span>
+  [ <span class="ruby-node">&quot;# elevation changes\nset origin 0,0\nset size 0.7,1\n&quot;</span>, <span class="ruby-string">&#39;&#39;</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-plot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">plot</span><span
+            class="method-args">( terminal = 'x11', outputfile = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="plot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">plot</span>( <span class="ruby-identifier">terminal</span> = <span class="ruby-string">&#39;x11&#39;</span>, <span class="ruby-identifier">outputfile</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">create_datafiles</span>
+  <span class="ruby-identifier">create_plotfile</span>
+  <span class="ruby-identifier">command</span> = <span class="ruby-node">&quot;set terminal push\nset terminal #{terminal}\n&quot;</span>
+  <span class="ruby-identifier">command</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%Q|set output &quot;#{GnuPlot::escape( outputfile )}&quot;\n|</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">outputfile</span>
+  <span class="ruby-identifier">command</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%Q|load &quot;#{plot_filename}&quot;\n|</span>
+  <span class="ruby-identifier">command</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">%Q|set terminal pop\n|</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-string">&#39;x11&#39;</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">terminal</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">opt</span> = <span class="ruby-string">&#39; -persist&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opt</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>( <span class="ruby-ivar">@directory</span> ) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">open</span>( <span class="ruby-node">&quot;| #{@binpath ? @binpath : &#39;gnuplot&#39;}#{opt}&quot;</span>, <span class="ruby-string">&#39;w&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proc</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">proc</span>.<span class="ruby-identifier">print</span> <span class="ruby-identifier">command</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-plot_filename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">plot_filename</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="plot_filename-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">plot_filename</span>
+  <span class="ruby-string">&#39;visibility.plot&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-polar_plot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">polar_plot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="polar_plot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">polar_plot</span>
+  <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> = <span class="ruby-identifier">polar_plot_setups</span>
+  <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">set</span>, <span class="ruby-identifier">unset</span> = <span class="ruby-identifier">polar_timestamps</span>( <span class="ruby-identifier">star</span> )
+    <span class="ruby-identifier">header</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">set</span>
+    <span class="ruby-identifier">footer</span> = <span class="ruby-identifier">unset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">footer</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">header</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">polar_plot_plots</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">footer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-polar_plot_plots" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">polar_plot_plots</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="polar_plot_plots-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">polar_plot_plots</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">visible_stars</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-string">&#39;plot&#39;</span> <span class="ruby-operator">+</span>            <span class="ruby-identifier">visible_stars</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span> <span class="ruby-node">%Q| &quot;#{GnuPlot::escape( data_filename( star ) )}&quot; using ($#{star.col_az}+90):(90-$#{star.col_el}) notitle with lines|</span> }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;,&#39;</span> ) <span class="ruby-operator">+</span>            <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;# no star is visible\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-polar_plot_setups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">polar_plot_setups</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="polar_plot_setups-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 268</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">polar_plot_setups</span>
+      <span class="ruby-identifier">orig_tag_num</span> = <span class="ruby-ivar">@tag_num</span>
+      <span class="ruby-identifier">header</span> =<span class="ruby-value">&lt;&lt;&quot;_END&quot;
+set polar
+set xtics (5, 30, 60, 75)
+unset border
+set format x &quot;&quot;
+set ytics (&quot;15&quot; 75, &quot;30&quot; 60, &quot;60&quot; 30, &quot;85&quot; 5)
+set xtics axis nomirror
+set ytics axis nomirror
+set angles degrees
+set size square
+set grid polar 30
+set xrange [-75:75]
+set yrange [-75:75]
+set label #{(@tag_num += 1) - 1} &quot;N&quot; at 0,80 center front
+set label #{(@tag_num += 1) - 1} &quot;E&quot; at -80,0 right front
+set label #{(@tag_num += 1) - 1} &quot;S&quot; at 0,-80 center front
+set label #{(@tag_num += 1) - 1} &quot;W&quot; at 80,0 left front
+_END</span>
+      <span class="ruby-identifier">footer</span> = (<span class="ruby-identifier">orig_tag_num</span><span class="ruby-operator">...</span><span class="ruby-ivar">@tag_num</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+        <span class="ruby-node">&quot;unset label #{tag}\n&quot;</span>
+      }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;&#39;</span> ) <span class="ruby-operator">+</span> <span class="ruby-value">&lt;&lt;&#39;_END&#39;
+unset polar
+unset xtics
+set xtics auto
+set border
+set format x &quot;% g&quot;
+unset ytics
+set ytics auto
+unset angles
+set grid nopolar
+set grid xtics ytics
+unset grid
+set size nosquare
+set xrange [*:*]
+set yrange [*:*]
+_END</span>
+      [ <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> ]
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-polar_timestamps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">polar_timestamps</span><span
+            class="method-args">( star )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="polar_timestamps-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">polar_timestamps</span>( <span class="ruby-identifier">star</span> )
+  <span class="ruby-identifier">set</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">unset</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">each_sec_on</span>( <span class="ruby-constant">LABEL_INTERVAL</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">time</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">azel</span> = <span class="ruby-identifier">star</span>.<span class="ruby-identifier">radec</span>( <span class="ruby-identifier">time</span> ).<span class="ruby-identifier">to_azel</span>( <span class="ruby-identifier">time</span>, <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lon</span>, <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lat</span> )
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">_azel_visible?</span>( <span class="ruby-identifier">azel</span> )
+    <span class="ruby-identifier">x</span> = ( <span class="ruby-value">90.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">azel</span>.<span class="ruby-identifier">el</span>.<span class="ruby-identifier">to_deg</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">azel</span>.<span class="ruby-identifier">az</span> )
+    <span class="ruby-identifier">y</span> = ( <span class="ruby-value">90.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">azel</span>.<span class="ruby-identifier">el</span>.<span class="ruby-identifier">to_deg</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">/</span><span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">azel</span>.<span class="ruby-identifier">az</span> )
+    <span class="ruby-identifier">set</span> <span class="ruby-operator">+=</span> <span class="ruby-node">%Q|set label #{@tag_num} &quot;&quot; at #{x},#{y} point #{timestamp_pt( time )}\n|</span>
+    <span class="ruby-identifier">unset</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;unset label #{@tag_num}\n&quot;</span>
+    <span class="ruby-ivar">@tag_num</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  [ <span class="ruby-identifier">set</span>, <span class="ruby-identifier">unset</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-store_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">store_file</span><span
+            class="method-args">( file, ddir )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="store_file-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">store_file</span>( <span class="ruby-identifier">file</span>, <span class="ruby-identifier">ddir</span> )
+  <span class="ruby-identifier">spath</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@directory</span>, <span class="ruby-identifier">file</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>( <span class="ruby-identifier">spath</span> ) <span class="ruby-keyword">and</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>( <span class="ruby-identifier">spath</span> ) 
+    <span class="ruby-identifier">src</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">spath</span> )
+    <span class="ruby-identifier">dpath</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">ddir</span>, <span class="ruby-identifier">file</span> )
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">dpath</span>, <span class="ruby-string">&#39;w&#39;</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dst</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">print</span>( <span class="ruby-identifier">src</span>.<span class="ruby-identifier">read</span> )
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">src</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-store_files" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">store_files</span><span
+            class="method-args">( ddir )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="store_files-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">store_files</span>( <span class="ruby-identifier">ddir</span> )
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>( <span class="ruby-identifier">ddir</span> )
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>( <span class="ruby-ivar">@directory</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">store_file</span>( <span class="ruby-identifier">file</span>, <span class="ruby-identifier">ddir</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_plot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_plot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_plot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_plot</span>
+  <span class="ruby-identifier">header</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">footer</span> = <span class="ruby-string">&#39;&#39;</span>
+  [ <span class="ruby-identifier">time_plot_setups</span>, <span class="ruby-identifier">time_timestamps</span>, <span class="ruby-identifier">time_plot_twilights</span> ].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">header</span> <span class="ruby-operator">+=</span>  <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">footer</span> <span class="ruby-operator">+=</span>  <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">header</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">time_plot_plots</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">footer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_plot_plots" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_plot_plots</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_plot_plots-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_plot_plots</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">visible_stars</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-comment">#&#39;plot&#39; + visible_stars.map{ |star| %Q| &quot;#{GnuPlot::escape( data_filename( star ) )}&quot; using #{star.col_time}:#{star.col_secz} title &quot;#{GnuPlot::escape( star.name )} #{ star.radec( @allocation.from ).coord( -1 ) }&quot; with lines| }.join( &#39;,&#39; ) + &quot;\n&quot;</span>
+    <span class="ruby-string">&#39;plot&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">visible_stars</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span>
+      <span class="ruby-node">%Q| &quot;#{GnuPlot::escape( data_filename( star ) )}&quot; using #{star.col_time}:#{star.col_secz} title &quot;#{GnuPlot::escape( star.name )} #{ &quot;%.1fh&quot; % (star.radec( @allocation.from ).ra.to_deg/15) }&quot; with lines|</span> }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;,&#39;</span> ) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;# no star is visible\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_plot_setups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_plot_setups</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_plot_setups-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 148</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">time_plot_setups</span>
+      <span class="ruby-identifier">els</span> = [<span class="ruby-value">15</span>, <span class="ruby-value">30</span>, <span class="ruby-value">45</span>, <span class="ruby-value">60</span>, <span class="ruby-value">75</span>]
+      <span class="ruby-identifier">lstfrom</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>( ( <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">from</span>.<span class="ruby-identifier">to_lst</span>( <span class="ruby-ivar">@observatory</span>.<span class="ruby-identifier">lon</span> )<span class="ruby-operator">*</span><span class="ruby-value">12.0</span><span class="ruby-operator">*</span><span class="ruby-value">3600.0</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> ).<span class="ruby-identifier">round</span> )
+      <span class="ruby-identifier">lstto</span> = <span class="ruby-identifier">lstfrom</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">duration</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Sphere</span><span class="ruby-operator">::</span><span class="ruby-identifier">sidereal_day</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">to</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">from</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> <span class="ruby-keyword">then</span>        <span class="ruby-comment"># 2 hours</span>
+        <span class="ruby-identifier">timefmt</span> = <span class="ruby-string">&#39;%H:%M&#39;</span>
+        <span class="ruby-identifier">timeunit</span> = <span class="ruby-string">&#39;&#39;</span>
+        <span class="ruby-identifier">xtics</span> = <span class="ruby-string">&#39;auto&#39;</span>
+        <span class="ruby-identifier">mxtics</span> = <span class="ruby-string">&#39;0&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">to</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">from</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> <span class="ruby-keyword">then</span>     <span class="ruby-comment"># 8 hours</span>
+        <span class="ruby-identifier">timefmt</span> = <span class="ruby-string">&#39;%H&#39;</span>
+        <span class="ruby-identifier">timeunit</span> = <span class="ruby-string">&#39; (hours)&#39;</span>
+        <span class="ruby-identifier">xtics</span> = <span class="ruby-string">&#39;3600&#39;</span>
+        <span class="ruby-identifier">mxtics</span> = <span class="ruby-string">&#39;6&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">to</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">from</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">36</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> <span class="ruby-keyword">then</span>    <span class="ruby-comment"># 1.5 days</span>
+        <span class="ruby-identifier">timefmt</span> = <span class="ruby-string">&#39;%H&#39;</span>
+        <span class="ruby-identifier">timeunit</span> = <span class="ruby-string">&#39; (hours)&#39;</span>
+        <span class="ruby-identifier">xtics</span> = <span class="ruby-string">&#39;7200&#39;</span>
+        <span class="ruby-identifier">mxtics</span> = <span class="ruby-string">&#39;4&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">to</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">from</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">72</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> <span class="ruby-keyword">then</span>    <span class="ruby-comment"># 3 days</span>
+        <span class="ruby-identifier">timefmt</span> = <span class="ruby-string">&#39;%H&#39;</span>
+        <span class="ruby-identifier">timeunit</span> = <span class="ruby-string">&#39; (hours)&#39;</span>
+        <span class="ruby-identifier">xtics</span> = <span class="ruby-string">&#39;21600&#39;</span>
+        <span class="ruby-identifier">mxtics</span> = <span class="ruby-string">&#39;4&#39;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">timefmt</span> = <span class="ruby-string">&#39;%d&#39;</span>
+        <span class="ruby-identifier">timeunit</span> = <span class="ruby-string">&#39; (day)&#39;</span>
+        <span class="ruby-identifier">xtics</span> = <span class="ruby-string">&#39;86400&#39;</span>
+        <span class="ruby-identifier">mxtics</span> = <span class="ruby-string">&#39;4&#39;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">header</span> =<span class="ruby-value">&lt;&lt;&quot;_END&quot;
+set timefmt &quot;#{@stars[0].col_time_format}&quot;
+set xdata time
+set xrange [&quot;#{@allocation.from.localtime.strftime( @timeformat )}&quot;:&quot;#{@allocation.to.localtime.strftime( @timeformat )}&quot;]
+set xlabel &quot;#{@allocation.from.localtime.strftime( &#39;%Z&#39; )}#{timeunit}&quot;
+set format x &quot;#{timefmt}&quot;
+set xtics #{xtics}
+set mxtics #{mxtics}
+set xtics nomirror
+set x2data time
+set x2range [&quot;#{lstfrom.utc.strftime( @timeformat )}&quot;:&quot;#{lstto.utc.strftime( @timeformat )}&quot;]
+set x2label &quot;LST#{timeunit}&quot;
+set x2tics #{xtics}
+set mx2tics #{mxtics}
+set format x2 &quot;#{timefmt}&quot;
+set yrange [#{1.0/Math::sin( @el_min )}:#{1.0/Math::sin( @el_max )}]
+set ylabel &quot;sec(z)&quot;
+set ytics auto
+set mytics 5
+set ytics nomirror
+set y2label &quot;El(deg)&quot;
+set y2tics (#{els.map{|el| %Q|&quot;#{el}&quot; #{1.0/Math::sin(el.to_f.to_rad)}|}.join(&#39;, &#39;)})
+set grid
+set key bottom
+set key samplen 2
+_END</span>
+<span class="ruby-identifier">footer</span> =<span class="ruby-value">&lt;&lt;&#39;_END&#39;
+unset timefmt
+unset xdata
+set xrange [*:*]
+unset xlabel
+set mxtics
+set yrange [*:*] noreverse
+unset ylabel
+set format x &quot;% g&quot;
+set xtics mirror
+unset x2label
+unset x2tics
+set ytics auto
+set mytics
+unset y2label
+unset y2tics
+set ytics mirror
+unset grid
+set key default
+_END</span>
+[ <span class="ruby-identifier">header</span>, <span class="ruby-identifier">footer</span> ]
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_plot_twilights" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_plot_twilights</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_plot_twilights-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_plot_twilights</span>
+  <span class="ruby-identifier">blank</span> = <span class="ruby-value">30</span>
+  <span class="ruby-identifier">set</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">unset</span> = <span class="ruby-string">&#39;&#39;</span>
+  [
+    [ <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">sunsets</span>( <span class="ruby-identifier">blank</span> ), <span class="ruby-string">&#39;sunset&#39;</span> ],
+    [ <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">sunrises</span>( <span class="ruby-identifier">blank</span> ), <span class="ruby-string">&#39;sunrise&#39;</span> ],
+    [ <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">nautical_twilight_ends</span>( <span class="ruby-identifier">blank</span> ), <span class="ruby-string">&#39;nautical&#39;</span> ],
+    [ <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">nautical_twilight_begins</span>( <span class="ruby-identifier">blank</span> ), <span class="ruby-string">&#39;nautical&#39;</span> ],
+  ].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ts</span>, <span class="ruby-identifier">comment</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">set</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">_time_plot_twilight_label</span>( <span class="ruby-identifier">t</span>, <span class="ruby-ivar">@tag_num</span>, <span class="ruby-identifier">comment</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">localtime</span>.<span class="ruby-identifier">strftime</span>( <span class="ruby-string">&#39; %H:%M&#39;</span> ) )
+      <span class="ruby-identifier">unset</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;unset label #{@tag_num}\n&quot;</span>
+      <span class="ruby-ivar">@tag_num</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  [ <span class="ruby-identifier">set</span>, <span class="ruby-identifier">unset</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_timestamps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_timestamps</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_timestamps-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_timestamps</span>
+  <span class="ruby-identifier">set</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">unset</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">each_sec_on</span>( <span class="ruby-constant">LABEL_INTERVAL</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">time</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">set</span> <span class="ruby-operator">+=</span> <span class="ruby-node">%Q|set label #{@tag_num} &quot;&quot; at &quot;#{time.localtime.strftime( @timeformat )}&quot;,graph 0 point #{timestamp_pt( time )}\n|</span>
+    <span class="ruby-identifier">unset</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;unset label #{@tag_num}\n&quot;</span>
+    <span class="ruby-ivar">@tag_num</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  [ <span class="ruby-identifier">set</span>, <span class="ruby-identifier">unset</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-timestamp_pt" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">timestamp_pt</span><span
+            class="method-args">( time )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="timestamp_pt-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">timestamp_pt</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-node">&quot;pt #{time.localtime.hour + 1}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-visible_stars" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">visible_stars</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="visible_stars-source">
+            <pre><span class="ruby-comment"># File lib/sphere/gnuplot.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visible_stars</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">star</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">star</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@stars_visible</span>[<span class="ruby-identifier">i</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

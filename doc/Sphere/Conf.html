@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Sphere::Conf - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-read">::read</a>
+    
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="#method-i-_parse_as_azel">#_parse_as_azel</a>
+    
+    <li ><a href="#method-i-_plot_to_conf">#_plot_to_conf</a>
+    
+    <li ><a href="#method-i-allocate-21">#allocate!</a>
+    
+    <li ><a href="#method-i-azel_to_radec-21">#azel_to_radec!</a>
+    
+    <li ><a href="#method-i-errors">#errors</a>
+    
+    <li ><a href="#method-i-errors_to_s">#errors_to_s</a>
+    
+    <li ><a href="#method-i-plot">#plot</a>
+    
+    <li ><a href="#method-i-push">#push</a>
+    
+    <li ><a href="#method-i-readconf">#readconf</a>
+    
+    <li ><a href="#method-i-to_conf">#to_conf</a>
+    
+    <li ><a href="#method-i-to_plot">#to_plot</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Sphere::Conf">
+  <h1 id="class-Sphere::Conf" class="class">
+    class Sphere::Conf
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">( now = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">now</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-ivar">@confs</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@now</span> = <span class="ruby-identifier">now</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">localtime</span>
+  <span class="ruby-ivar">@parsed</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;Star&#39;</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;AzEl&#39;</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-constant">REQ_ITEMS</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@parsed</span>[ <span class="ruby-identifier">key</span> ] = <span class="ruby-identifier">val</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">OPT_ITEMS</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@parsed</span>[ <span class="ruby-identifier">key</span> ] = <span class="ruby-identifier">val</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@fatal</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-read" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read</span><span
+            class="method-args">( additional_paths = [], now = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>read configuration files</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 290</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">read</span>( <span class="ruby-identifier">additional_paths</span> = [], <span class="ruby-identifier">now</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">r</span> = <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>( <span class="ruby-identifier">now</span> )
+  ( <span class="ruby-constant">FILES</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">additional_paths</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">abspath</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>( <span class="ruby-identifier">path</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>( <span class="ruby-identifier">abspath</span> ) <span class="ruby-keyword">and</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">readable?</span>( <span class="ruby-identifier">abspath</span> ) <span class="ruby-keyword">then</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">abspath</span> ) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">readconf</span>( <span class="ruby-identifier">f</span> ) }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-5B-5D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get the <a href="ConfItem.html">ConfItem</a> values as an Array</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-identifier">r</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@confs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">key</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-_parse_as_azel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_parse_as_azel</span><span
+            class="method-args">( item, data )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="_parse_as_azel-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 373</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_parse_as_azel</span>( <span class="ruby-identifier">item</span>, <span class="ruby-identifier">data</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-value">3</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">item</span>.<span class="ruby-identifier">error</span> = <span class="ruby-string">&#39;error in parsing as an azel&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">az</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_f</span>.<span class="ruby-identifier">to_rad</span>
+    <span class="ruby-identifier">el</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_f</span>.<span class="ruby-identifier">to_rad</span>
+    <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;AzEl&#39;</span>] <span class="ruby-operator">&lt;&lt;</span> [ <span class="ruby-node">&quot;Az:#{data[0]} El:#{data[1]} at #{data[2]}&quot;</span>, <span class="ruby-identifier">az</span>, <span class="ruby-identifier">el</span>, <span class="ruby-identifier">data</span>[<span class="ruby-value">2</span>] ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-_plot_to_conf" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_plot_to_conf</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="_plot_to_conf-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 578</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_plot_to_conf</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-identifier">_allocation_to_conf</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-node">%w( plotter device output datadir el-min el-max az-center az-halfwidth )</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>][<span class="ruby-value">-1</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;# plotting options\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;# stars\n&quot;</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">&#39;Star&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">omit_key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-allocate-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">allocate!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>create an <a href="Allocation.html">Allocation</a>, returns nil for an
+error</p>
+          
+          
+
+          
+          <div class="method-source-code" id="allocate-21-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 434</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allocate!</span>
+  <span class="ruby-ivar">@fatal</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># define observatory</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;lon&#39;</span>] <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;lat&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;location&#39;</span>] <span class="ruby-keyword">then</span>
+      <span class="ruby-ivar">@fatal</span> = <span class="ruby-string">&#39;location must be specified&#39;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">observatory</span> = <span class="ruby-constant">Observatory</span><span class="ruby-operator">::</span><span class="ruby-identifier">of</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;location&#39;</span>] )
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RuntimeError</span>
+      <span class="ruby-ivar">@fatal</span> = <span class="ruby-node">&quot;location &#39;#{@parsed[&#39;location&#39;]}&#39; not found&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;location&#39;</span>] <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">location</span> = <span class="ruby-node">&quot;#{self[&#39;lon&#39;][-1].val} #{self[&#39;lat&#39;][-1].val}&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">location</span> = <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;location&#39;</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">observatory</span> = <span class="ruby-constant">Observatory</span>.<span class="ruby-identifier">new</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;lon&#39;</span>], <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;lat&#39;</span>], <span class="ruby-identifier">location</span> )
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># define time span</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;start&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@fatal</span> = <span class="ruby-string">&#39;start time must be specified&#39;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;finish&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@fatal</span> = <span class="ruby-string">&#39;finish time must be specified&#39;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">t1</span> = <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;start&#39;</span>].<span class="ruby-identifier">time</span>( <span class="ruby-identifier">observatory</span>, <span class="ruby-ivar">@now</span> )
+    <span class="ruby-identifier">t2</span> = <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;finish&#39;</span>].<span class="ruby-identifier">time</span>( <span class="ruby-identifier">observatory</span>, <span class="ruby-ivar">@now</span> )
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RuntimeError</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-identifier">$!</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">t2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">t1</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;finish&#39;</span>].<span class="ruby-identifier">symbol</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">t2</span> = <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;finish&#39;</span>].<span class="ruby-identifier">time</span>( <span class="ruby-identifier">observatory</span>, <span class="ruby-identifier">t2</span> <span class="ruby-operator">+</span> <span class="ruby-value">24</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">t1</span> = <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;start&#39;</span>].<span class="ruby-identifier">time</span>( <span class="ruby-identifier">observatory</span>, <span class="ruby-identifier">t1</span> <span class="ruby-operator">-</span> <span class="ruby-value">24</span><span class="ruby-operator">*</span><span class="ruby-value">3600</span> )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@allocation</span> = <span class="ruby-constant">Sphere</span><span class="ruby-operator">::</span><span class="ruby-constant">Allocation</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">t2</span>, <span class="ruby-identifier">observatory</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-azel_to_radec-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">azel_to_radec!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="azel_to_radec-21-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 481</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">azel_to_radec!</span>
+  <span class="ruby-identifier">allocate!</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@allocation</span>
+  <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;Star&#39;</span>] <span class="ruby-operator">+=</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;AzEl&#39;</span>].<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">azel</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">azel</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">time</span> = <span class="ruby-constant">AstroTime</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">azel</span>[<span class="ruby-value">3</span>] ).<span class="ruby-identifier">time</span>( <span class="ruby-ivar">@allocation</span> )
+    <span class="ruby-identifier">radec</span> = <span class="ruby-constant">AzEl</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">azel</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">azel</span>[<span class="ruby-value">2</span>] ).<span class="ruby-identifier">to_radec</span>( <span class="ruby-identifier">time</span>, <span class="ruby-ivar">@allocation</span>.<span class="ruby-identifier">observatory</span> )
+    [ <span class="ruby-identifier">name</span>, <span class="ruby-identifier">radec</span>.<span class="ruby-identifier">ra</span>, <span class="ruby-identifier">radec</span>.<span class="ruby-identifier">dec</span> ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-errors" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">errors</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>error messages as an Array</p>
+          
+          
+
+          
+          <div class="method-source-code" id="errors-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 417</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">errors</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@confs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">error_to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conf</span>.<span class="ruby-identifier">error</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@fatal</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-errors_to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">errors_to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>error messages as a <a href="../String.html">String</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="errors_to_s-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">errors_to_s</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">error</span><span class="ruby-operator">|</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;&#39;</span> )
+  <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@fatal</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-plot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">plot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>plot according to the configuration</p>
+          
+          
+
+          
+          <div class="method-source-code" id="plot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">plot</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-identifier">to_plot</span>
+  [
+    [ <span class="ruby-string">&#39;el-min&#39;</span>, <span class="ruby-string">&#39;el_min&#39;</span> ],
+    [ <span class="ruby-string">&#39;el-max&#39;</span>, <span class="ruby-string">&#39;el_max&#39;</span> ],
+    [ <span class="ruby-string">&#39;az-center&#39;</span>, <span class="ruby-string">&#39;az_center&#39;</span> ],
+    [ <span class="ruby-string">&#39;az-halfwidth&#39;</span>, <span class="ruby-string">&#39;az_halfwidth&#39;</span> ],
+  ].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">send</span>( <span class="ruby-node">&quot;#{a[1]}=&quot;</span>, <span class="ruby-ivar">@parsed</span>[<span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]].<span class="ruby-identifier">to_f</span>.<span class="ruby-identifier">to_rad</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>]]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">p</span>.<span class="ruby-identifier">plot</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;device&#39;</span>], <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;output&#39;</span>] )
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;datadir&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">store_files</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;datadir&#39;</span>] )
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;output&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">store_file</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;output&#39;</span>], <span class="ruby-string">&#39;.&#39;</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-push" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">push</span><span
+            class="method-args">( item )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>add a <a href="ConfItem.html">ConfItem</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="push-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push</span>( <span class="ruby-identifier">item</span> )
+  <span class="ruby-ivar">@confs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">_parse</span>( <span class="ruby-identifier">item</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-readconf" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">readconf</span><span
+            class="method-args">( io )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>read configuration items from an IO</p>
+          
+          
+
+          
+          <div class="method-source-code" id="readconf-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">readconf</span>( <span class="ruby-identifier">io</span> )
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">i</span> = <span class="ruby-constant">ConfItem</span>.<span class="ruby-identifier">readline</span>( <span class="ruby-identifier">line</span>, <span class="ruby-identifier">io</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">io</span>.<span class="ruby-identifier">lineno</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-ivar">@confs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span>
+      <span class="ruby-identifier">_parse</span>( <span class="ruby-identifier">i</span> )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_conf" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_conf</span><span
+            class="method-args">( what = Plot )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>a <a href="../String.html">String</a> of configuration</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_conf-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 544</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_conf</span>( <span class="ruby-identifier">what</span> = <span class="ruby-constant">Plot</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Class</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">class</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">what</span> = <span class="ruby-identifier">what</span>.<span class="ruby-identifier">class</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Allocation</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">what</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">_allocation_to_conf</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Plot</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">what</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">_plot_to_conf</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{what} cannot be conveted to a Conf&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_plot" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_plot</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>creates a <a href="Plot.html">Plot</a>, returns nil for an error</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_plot-source">
+            <pre><span class="ruby-comment"># File lib/sphere/conf.rb, line 492</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_plot</span>
+  <span class="ruby-comment"># allocation</span>
+  <span class="ruby-identifier">allocate!</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@allocation</span>
+  <span class="ruby-comment"># finalize AzEl reference points</span>
+  <span class="ruby-identifier">azel_to_radec!</span>
+  <span class="ruby-comment"># check for Gnuplot</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;plotter&#39;</span>] <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@fatal</span> = <span class="ruby-string">&#39;plotter must be specified&#39;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># plot</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Sphere</span>.<span class="ruby-identifier">const_defined?</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;plotter&#39;</span>] ) <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">p</span> = <span class="ruby-constant">Sphere</span>.<span class="ruby-identifier">const_get</span>( <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;plotter&#39;</span>] ).<span class="ruby-identifier">send</span>( <span class="ruby-string">&#39;new&#39;</span>, <span class="ruby-ivar">@allocation</span> )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@fatal</span> = <span class="ruby-node">&quot;&#39;#{@parsed[&#39;plotter&#39;]}&#39; is an illegal plotter&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># stars</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;Star&#39;</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@fatal</span> = <span class="ruby-string">&#39;there is no star specified&#39;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConfError</span>, <span class="ruby-ivar">@fatal</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@parsed</span>[<span class="ruby-string">&#39;Star&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">PLANETS</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">star</span>[<span class="ruby-value">0</span>] ) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">stars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Sphere</span>.<span class="ruby-identifier">const_get</span>( <span class="ruby-identifier">star</span>[<span class="ruby-value">0</span>] ).<span class="ruby-identifier">send</span>( <span class="ruby-string">&#39;new&#39;</span> )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">stars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Sphere</span><span class="ruby-operator">::</span><span class="ruby-constant">Star</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">star</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">star</span>[<span class="ruby-value">2</span>], <span class="ruby-identifier">star</span>[<span class="ruby-value">0</span>] )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">p</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

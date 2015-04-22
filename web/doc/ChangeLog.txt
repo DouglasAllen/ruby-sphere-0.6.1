@@ -1,0 +1,514 @@
+* Tue Apr  5 2011 Daigo Tomono <dtomono at freeshell.org>
+- (0.6.1)
+- test/run-test.rb: Modified to define StringIO#path
+- lib/sphere/wcs.rb: Modified to rescue atan2(0,0)
+- Makefile: Modified to run on ruby-1.9.2p136
+
+* Wed Oct 14 2009 Daigo Tomono <dtomono at freeshell.org>
+- (0.6.0)
+- lib/sphere/axel.rb: Added prefix argument to Sphere::rad_to_dms()
+- lib/sphere/azel.rb: Added Numeric#rad_to_hms() and rad_to_hms()
+- test/testazel.rb: Added tests accordingly
+- test/testsatellite.rb: Stopped running pending tests
+
+* Mon Jul  6 2009 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/azel.rb: Refactored Sphere::lst_to_ut()
+
+* Mon Jul  6 2009 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/azel.rb: Refactored Sphere::dteph()
+
+* Fri Mar 13 2009 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.5)
+- Releaseing after checking on ruby-1.8.3
+
+* Thu Mar 12 2009 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: removed an assertion expecting RuntimeError
+  which is not raised on Ruby 1.8.6p111 and 1.9.1p0
+
+* Thu Mar 12 2009 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/tempdir.rb: modified to use Dir.mktmpdir if possible
+
+* Thu Mar 12 2009 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/conf.rb: _get_time: added check for specification of time
+  - tests for this pass on ruby-1.8.7 and ruby-1.9.1
+  - tests for this pass on ruby-1.8.3
+
+* Thu Mar 12 2009 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/conf.rb: clarified regexp for date_offset
+- test/testconf.rb: added tests for date_offset on ruby-1.8.6
+
+* Wed Mar 11 2009 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: tests modified to pass on ruby-1.8.3
+
+* Wed Mar 11 2009 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: tests added in preparation to make ruby-1.8.7 compatible
+
+* Mon Dec  1 2008 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: modified following changes on sourceforge.net
+
+* Mon Dec  1 2008 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.4)
+- lib/sphere/azel.rb: modified Sphere::gmst() to take fractions of
+  seconds into account
+
+* Mon Dec  1 2008 Daigo Tomono <dtomono at freeshell.org>
+- test/testazel.rb: added a test to calculate LST including fractions of
+  seconds
+
+* Fri Sep 26 2008 Daigo Tomono <dtomono at freeshell.org>
+- test/testazel.rb: added another test for RA with a plus sign
+
+* Fri Sep 26 2008 Daigo Tomono <dtomono at freeshell.org>
+- test/testazel.rb: added a test for minus RA
+
+* Mon Nov  5 2007 Daigo Tomono <dtomono at freeshell.org>
+- test/testsatellite.rb: added a test on Intelsat707
+  which still fails ...X|
+
+* Mon Oct 29 2007 Daigo Tomono <dtomono at freeshell.org>
+- test/testsatellite.rb: added a test on HST from
+  http://www.heavens-above.com/ which still fails ...X|
+
+* Mon Oct 29 2007 Daigo Tomono <dtomono at freeshell.org>
+- test/testsatellite.rb: added test_googlesat2_again to confirm
+  results with
+  http://www.lizard-tail.com/isana/lab/googlesat/googlesat2.php
+
+* Mon Oct 29 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: debugged Earth#apparent_from() with
+  simple tests in test/testearth.rb. Tests in
+	test/testsatellite.rb still fail.
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: implementing Earth#apparent_from()
+  Tests still fail
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: implemented Earth#geodetic=()
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: refactored BesselEarth to be child of Earth
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: refactored BesselEarth#cartesian=()
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: debugged BesselEarth#cartesian=()
+
+* Sun Oct 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: modified Position to BesselEarth
+
+* Thu Oct 25 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb: implemented Satellite#position(time)
+
+* Thu Oct 25 2007 Daigo Tomono <dtomono at freeshell.org>
+- lib/sphere/satellite.rb and test/testsatellite.rb: added
+- lib/sphere/satellite.rb: implemented Satellite::TLE
+- Makefile: improved commit target
+
+* Wed Sep 26 2007 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.3)
+- lib/sphere/gnuplot.rb: fixed bug in showing RA of stars in hours
+
+* Thu Sep 13 2007 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.2)
+- allowed location in configuration file to have only coordinates.
+- Tagging failed during the last commit again.
+
+* Tue Sep  4 2007 Daigo Tomono <dtomono at freeshell.org>
+- Tagging failed during the last commit.
+
+* Tue Sep  4 2007 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.1)
+- added Observatory::at as an alias for Observatory::of
+- modified Sphere::sunrise, sunset, *twilight_begin, and
+  *twilgiht_end to accept not only time, lon, lat but also
+  time, Observatory
+- added sunrise, sunset, *twilight_begin, and *twilgiht_end
+  methods to Observatory
+
+* Tue Mar 27 2007 Daigo Tomono <dtomono at freeshell.org>
+- Moved to subversion on sourceforge.net
+- Makefile: modified to use svn. Not all targets have been tested.
+
+* Thu Mar  1 2007 Daigo Tomono <dtomono at freeshell.org>
+- README.en: updated URL for tar ball, spell-checked
+
+* Wed Feb 28 2007 Daigo Tomono <dtomono at freeshell.org>
+- (0.5.0) - addition of Sphere::pa
+- lib/sphere/azel.rb: Sphere:: added Sphere::pa(point0, point1)
+- test/testazel.rb: added tests for Sphere::pa
+
+* Sun Feb  4 2007 Daigo Tomono <dtomono at freeshell.org>
+- setup.rb: updated
+
+* Sun Feb  4 2007 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: modified to specify dates more explicitly.
+  Time.parse turnned out not to be smart enough
+- test/testconf.rb: modified to mkdir only when directory does
+  not exist
+
+* Tue Dec  5 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.6)
+- sphere/azel.rb: clarified definition of position angle
+
+* Mon Aug  7 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.4)
+- sphere/gnuplot.rb: larger time view and smaller polar view to better show
+  star data
+
+* Mon Aug  7 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.4)
+- sphere/gnuplot.rb: use Dir.chdir with a block
+- sphere/conf.rb: AstroTime: reconstructed
+  - added time_with_observatory and time_with_allocation
+  - do not use hint when parsing `now'
+
+* Mon Aug  7 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.3)
+- sphere/conf.rb: added store_file() to keep output file even without
+  datadir specified
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.2)
+- sphere/conf.rb: Conf#_parse_as_time: fixed bug in passing hint to AstroTime
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.4.1)
+- sphere/conf.rb: added SYMBOLS listing all symbols, e.g. sunset
+- sphere/conf.rb, test/testconf.rb: added check for failure in Time.parse()
+- oops. skipped version 0.4.0
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.13)
+- test/testconf.rb: corrected tests for AstroTime
+- sphere/conf.rb: corrected bug accordingly
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.12)
+- bin/visiblity: shows warnings about configuration file
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.11)
+- sphere/conf.rb: added missing requires
+- sphere/conf.rb: completed Conf#azel_to_radec!
+- sample/planets.conf: added an example of AzEl reference
+- sphere/conf.rb: added noon and midnight as time symbols
+- sample/planets.conf: added a discription about time symbols
+
+* Fri Jul 21 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.10)
+- sphere/conf.rb: modified Conf to use AstroTime
+
+* Thu Jul 20 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.9)
+- sphere/conf.rb: added Sphere::AstroTime, not yet used from other class
+
+* Wed Jul 19 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.8)
+- sphere/conf.rb: added _parse_as_azel with changing name from
+  to_allocation to allocate! and changing API on _str_to_time
+
+* Wed Jul 19 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/conf.rb: added _str_to_time() to parse time from a String
+
+* Tue Jul 18 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.7)
+- sphere/observatory.rb: added MethodArgs::args_to_lst_and_lat that accepts
+  a Time and an Observatory.
+
+* Tue Jul 18 2006 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: added test to recognize of time `now'
+- test/testconf.rb: test_azelrange: added better description of test
+
+* Tue Jul 18 2006 Daigo Tomono <dtomono at freeshell.org>
+- test/testconf.rb: activated notest_* tests
+
+* Sun Jul  2 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/star.rb: modified output format for better data file
+
+* Sun Jul  2 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/gnuplot.rb: better presentation of local time and LST
+
+* Sun Jul  2 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/gnuplot.rb: paragraphized gnuplot plot script
+
+* Tue Jun  6 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.6)
+- sphere/gnuplot.rb: better presentation of local time and LST
+
+* Fri May 19 2006 Daigo Tomono <dtomono at freeshell.org>
+- web/index.html: added bettter description about the Project Summary URL
+
+* Tue May 16 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/azel.rb: clarified definition of position angle
+
+* Tue May 16 2006 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.5)
+- Makefile: added -I to ruby in target `test' to use the current library
+- sphere/star.rb: fixed bug in Star#cols: string preseintation of LST used local time
+
+* Tue May 16 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/observatory.rb and allocation.rb: better documentation
+
+* Mon Feb 27 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/azel.rb: fixed typo
+
+* Thu Feb 23 2006 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: changed >| into >, >| might be harmful on some shells
+
+* Thu Feb 16 2006 Daigo Tomono <dtomono at freeshell.org>
+- sphere/azel.rb: added better documentation about Sphere::AzEl.az
+
+* Thu Dec  8 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.4)
+- sphere/conf.rb: allow a comma as a delimitor between RA and Dec in conf files
+
+* Tue Dec  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- test/testwcs.rb: added test based on a COMICS fits file
+
+* Tue Dec  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.3)
+- sphere/wcs.rb,azel.rb: RaDec#to_s, AzEl#to_s, and XY#to_s are defined
+
+* Tue Dec  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.2)
+- sphere/wcs.rb: XY#+ and XY#+ are defined
+
+* Tue Dec  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.1)
+- sphere/wcs.rb: use CDij correctly instead of PCij
+
+* Tue Dec  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.3.0)
+- sphere/azel.rb: s/_az_and_el/long_and_lat/
+- sphere/wcs.rb: added to handle coordinates as in FITS WCS headers
+
+* Tue Sep 20 2005 Daigo Tomono <dtomono at freeshell.org>
+- GPL and LGPL: updated the address of FSF
+
+* Wed Sep  7 2005 Daigo Tomono <dtomono at freeshell.org>
+- README.en: added explanation how to install under /usr/local
+
+* Wed Jul  6 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.6)
+- sphere/azel.rb: Sphere::rad_to_dms: fixed bug in rounding (BTS:1195701)
+
+* Fri Jun 17 2005 Daigo Tomono <dtomono at freeshell.org>
+- fixed typo
+
+* Thu Jun 15 2005 Daigo Tomono <dtomono at freeshell.org>
+- web/index.html: new URL for the sourceforge logo, see http://sourceforge.net/docman/display_doc.php?docid=790&group_id=1#addhtml
+
+* Tue Jan 28 2005 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: fixed typo
+
+* Tue Jan 28 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.5)
+- man/man1/visibility.1: added
+
+* Tue Jan 28 2005 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: target `commit' prints out log message
+
+* Tue Jan 28 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.4)
+- sphere/azel.rb: better RDoc for AzEl::to_radec and RaDec::to_azel.
+- sphere/conf.rb: better RDoc.
+
+* Thu Jan 27 2005 Daigo Tomono <dtomono at freeshell.org>
+- web/index.html: new hostname for the sourceforge logo, see
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1109940&group_id=1&atid=350001
+
+* Wed Jan 26 2005 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: added commit target
+
+* Tue Jan 25 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.3)
+- sphere/azel.rb: added Sphere::sidereal_day for sphere/gnuplot.rb
+- sphere/gnuplot.rb: fixed bug: LST now shown correctly for an observation of more than a day.
+
+* Tue Jan 25 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.2)
+- ChangeLog: fix typo
+- sphere/version.rb: added NAME constant
+- sphere/tmpdir.rb: chnaged default tmpdir to /var/cache/ruby-sphere
+- post-install.rb: added to make the cache directory
+
+* Sat Jan 22 2005 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.1)
+- bugfix to 0.2.0
+- bin/: added to the repository ...
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.2.0)
+- sample/planet.conf: added more options
+- test/testconf.rb: deleted test_azelrange which has to be checed by human eyes
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.8)
+- sphere/conf.rb: added el-min, el-max, az-center, and az-halfwidth
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.7)
+- sphere/gnuplot.rb: changed from minimum_el to el_min, added el_max, az_center, and az_halfwidth
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- bin/visiblity: -v, -V, and -h options to immediately exit successfully
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.6)
+- sphere/gnuplot.rb: set mxtics and mx2tics to be zero. Bug in Gnuplot? (3.8j)
+
+* Mon Dec 20 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.5)
+- sphere/azel.rb: deleted double defnition of ra_to_ha
+- sphere/conf.rb: Conf::read() now takes an array of file paths and reads every file
+- sphere/conf.rb: Conf#read() renamed as Conf#readconf()
+- bin/visibility: added
+- sample/planets.conf: added
+- README.en and README.ja: added discription about bin/visibility
+
+* Thu Dec 16 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.4)
+- sphere/conf.rb: Sphere::ConfItem records remarks
+- test/testconf.rb: test_conf_to_allocation specified current time
+- sphere/conf.rb: Sphere::Conf#[] now retruns an Array of ConfItem's
+- sphere/conf.rb: Sphere::Conf#to_conf implemented
+- sphere/conf.rb: Sphere::Conf#plot implemented
+- sphere/allocation.rb: Sphere::Allocation#_sun_times and related functions takes blank argument to specify a timespan not to detect events
+- sphere/gnuplot.rb: Sphere::Allocation#time_plot_twilights takes 30 sec blank time
+
+* Wed Dec 15 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.3)
+- sphere/conf.rb: better documentation
+- sphere/conf.rb: added Sphere::ConfItem.unshift_key!() and omit_key!
+
+* Wed Dec 15 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.2)
+- sphere/conf.rb: only `datadir' can be set nil
+- sphere/conf.rb: added Sphere::Conf#to_plot
+- sphere/conf.rb: Sphere::Conf#errors returns conf.error_to_s and @fatal instead of conf
+
+* Wed Dec 15 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.1)
+- sphere/conf.rb: added
+- sphere/axel.rb: String#dms_to_rad raises a RuntimeError when String can not be converted
+- sphere/observatory.rb: specified Observatory::of() to raise RuntimeError when location is not found
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- README.ja: fixed typo
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- Makefile: added a target `release' to test and pack the release version
+- Makefile: added a target `reltest' to test the release version
+- README.ja: translated as summary from README.en,v 1.12
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- README.en: chnaged RD for prettier output
+- README.en: added URL for the tarball
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.0)
+- README.en: fixed RD syntax error
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.0)
+- README.en: added a description about targets in Makefile
+- Makefile: added target dist to create a tarball
+
+* Thu Dec  9 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.0)
+- sphere/version.rb: forgot to update version
+
+* Wed Dec  8 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.1.0)
+- web/index.html: added link to the screenshots
+- README.en: added URL for download
+
+* Wed Dec  8 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.10)
+- sphere/observatory.rb: Observatory.coord: reduced default precision
+- sample/tonight.rb, sample/constellations.rb: added
+- README.en: added URL for bug reports
+
+* Wed Dec  8 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.9)
+- sphere.rb: added
+
+* Wed Dec  8 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.8)
+- sphere/observatory.rb: added Locations
+- sphere/observatory.rb: removed Observatory::subaru
+
+* Wed Dec  1 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.7)
+- sphere/allocation.rb: changed arguments of Allocation.new: now takes observatory
+- spehre/star.rb: renamed sunrise/sunset and twilight methods
+- sphere/allocation.rb: added Allocation#sunrises, sunsets, civili_twilight_begins, ans so on
+- sphere/gnuplot.rb: plots times for sunset, sunrise, and nautical twilight
+
+* Tue Nov 30 2004 Daigo Tomono <dtomono at freeshell.org>
+- sphere/azel.rb: Does Time#utc change default TZ?
+- sphere/allocation.rb: added middle
+- sphere/allocation.rb: each_sec_on won't be messed up with utc/local
+
+* Fri Nov 26 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.6)
+- sphere/star.rb: added Sphere::sunrise, sunset, twilights
+- sphere/azel.rb: to_deg and to_rad defined in Numeric
+
+* Fri Nov 26 2004 Daigo Tomono <dtomono at freeshell.org>
+- test/teststar.rb: test case for Moon from Astronomical Almanac
+
+* Thu Nov 25 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.5)
+- sphere/star.rb: fixed Moon#lambdabeta and phase
+- sphere/star.rb: fixed Planet#cc
+
+* Tue Nov 23 2004 Daigo Tomono <dtomono at freeshell.org>
+- sphere/azel.rb: added LambdaBeta.shift!
+- sphere/star.rb: added Moon (NOTE: Moon#lambdabeta is still buggy!)
+- sphere/star.rb: replaced @c*@c with c2 to quicker calculations
+- sphere/star.rb: fixed bug (wrong sign) in Mercury#ec
+- COPYING: added description about setup.rb and tempdir.rb
+- sphere/star.rb: added Planet#ll and tb
+
+* Fri Nov 19 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.4)
+- sphere/star.rb: added Mercury and Mars
+
+* Fri Nov 19 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.3)
+- sphere/star.rb: added Venus
+- Makefile: updates README for change of version
+
+* Thu Nov 18 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.2)
+- added version number in documents
+
+* Tue Nov 16 2004 Daigo Tomono <dtomono at freeshell.org>
+- (0.0.1)
+- rise time and set time for stars and the Sun
+
+* Fri Nov 12 2004 Daigo Tomono <dtomono at freeshell.org>
+- cols and cols_comment moved from Sphere::GnuPlot to Sphere::StellarBody
+- Sphere::Sun: can be plotted
+- Sphere::GnuPlot.create_datafile: empty line when star is below horizon
+
+* Fri Nov 12 2004 Daigo Tomono <dtomono at freeshell.org>
+- web/index.html: link to ChangeLog
+
+* Fri Nov 12 2004 Daigo Tomono <dtomono at freeshell.org>
+- Sphere::Sun::lambdabeta,radec
+
+* Fri Nov 12 2004 Daigo Tomono <dtomono at freeshell.org>
+- README.en: download URL
+
+* Wed Nov 10 2004 Daigo Tomono <dtomono at freeshell.org>
+- Sphere::LambdaBeta - ecliptic coordinate sytem
+
+* Wed Nov  3 2004 Daigo Tomono <dtomono at freeshell.org>
+- Sphere::jd accepts Date
+- Sphere::jd for UT 0h
+- Sphere::fjd including time within a day
+- Sphere::Sun calculates solar longitude and diameter

@@ -1,0 +1,22 @@
+body { margin: 1em 3em 1em 3em; color: black; background-color: white; }
+a[href]:link { color: darkblue; text-decoration: underline; }
+a[href]:visited { color: darkblue; text-decoration: underline; }
+a:hover[href], a:focus[href], a:active[href] { color: blue; text-decoration: underline; }
+a img { border: none; }
+h1, h2, h3, dt { font-family: sans-serif; }
+h1 {
+	color: white;
+	background-color: #902040;
+	padding: 0.5em 0.5em 0.5em 64px;
+	background-image: url(ruby-sphere-logo-32.png);
+	background-position: 16px;
+	background-repeat: no-repeat;
+}
+h2, h3 { color: #902040; }
+div.footer { font-size: 75%; text-align: right; }
+pre, blockquote {
+  background-color: #ffeaea;
+	color: #600000;
+	margin: 0.5em 1em 0.5em 1em;
+	padding: 0.75em 0.75em 0.75em 0.75em;
+}

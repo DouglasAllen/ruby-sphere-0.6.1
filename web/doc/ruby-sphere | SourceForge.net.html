@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<!-- Server: sfs-consume-5 -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>-->
+<html class="js flexbox canvas canvastext no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths fancybox-margin fancybox-lock" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        
+        <meta id="webtracker" name="webtracker" content="{&quot;event_id&quot;: &quot;b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91&quot;, &quot;project&quot;: &quot;ruby-sphere&quot;, &quot;non_clicker&quot;: 0.9072777432051021, &quot;active_tests&quot;: [&quot;psp_redirect_immersion&quot;], &quot;clicker&quot;: 0.094218493772901}">
+    <meta name="description" content="Download ruby-sphere. ruby-sphere is a set of libraries and user interfaces written in Ruby to calculate apparent positions of stars with a moderate accuracy. Its goal is to pro">
+
+
+
+<meta property="og:title" content="ruby-sphere">
+<meta property="og:type" content="product">
+<meta property="og:image" content="http://a.fsdn.com/allura/p/ruby-sphere/icon">
+<meta property="og:url" content="http://sourceforge.net/projects/ruby-sphere/">
+<meta property="og:site_name" content="SourceForge">
+<meta property="og:description" content="Download ruby-sphere. ruby-sphere is a set of libraries and user interfaces written in Ruby to calculate apparent positions of stars with a moderate accuracy. Its goal is to pro">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ruby-sphere | SourceForge.net</title>
+        <link rel="shortcut icon" href="http://a.fsdn.com/con/img/sftheme/favicon.ico">
+        
+
+<!-- CCM Tag -->
+<script src="ruby-sphere%20%7C%20SourceForge.net_files/analytics.js" async=""></script><script src="ruby-sphere%20%7C%20SourceForge.net_files/tag.js" async="" type="text/javascript"></script><script type="text/javascript">
+  //ccm informer
+/*jshint ignore:start*/
+    (function(f,i,c){var a=decodeURIComponent,e="",l="",o="||",g=";;",h="split",b="length",j="indexOf",k=0,n="localStorage",m="_ccmdt";f[c]=f[c]||{};function d(q){var p;if(f[n]){return f[n][q]||""}else{p=i.cookie.match(q+"=([^;]*)");return(p&&p[1])||""}}f[c].us={};e=a(d(m))[h](o);k=e[b];if(k>0){while(k--){l=e[k][h]("=");if(l[b]>1){if(l[1][j](g)>-1){f[c].us[l[0]]=l[1][h](g);f[c].us[l[0]].pop()}else{f[c].us[l[0]]=l[1]}}}}})(window,document,"_ml");
+/*jshint ignore:end*/
+
+  //ccm tag
+  (function () {
+    /*global _ml:true, window */
+    _ml = window._ml || {};
+    _ml.eid = '771';
+    _ml.ht = 'shex';
+    _ml.informer = {
+      enable: true
+    };
+    var s = document.getElementsByTagName('script')[0], cd = new Date(), mltag = document.createElement('script');
+    mltag.type = 'text/javascript'; mltag.async = true;
+    mltag.src = '//ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth() + cd.getFullYear();
+    s.parentNode.insertBefore(mltag, s);
+  })();
+</script>
+<!-- End CCM Tag -->
+
+        <script type="text/javascript">
+            /*global unescape, window, console, jQuery, $, net, SF, COMSCORE, DD_belatedPNG, ga */
+            // Setup our namespace
+            if (!window.SF) { window.SF = {}; }
+            if (!window.net) { window.net = {}; }
+            if (!window.net.sf) { window.net.sf = {}; }
+            SF.Ads = {};
+            SF.cdn = '//a.fsdn.com/con';
+            SF.deploy_time = '1428421336';
+        </script>
+        <script src="ruby-sphere%20%7C%20SourceForge.net_files/sf.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="ruby-sphere%20%7C%20SourceForge.net_files/mytube.css"><script src="ruby-sphere%20%7C%20SourceForge.net_files/mutationObserver.js"></script>
+        
+<!--[if lt IE 7 ]>
+  <script src="//a.fsdn.com/con/js/sftheme/dd_belatedpng.js"></script>
+  <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+
+<link href="ruby-sphere%20%7C%20SourceForge.net_files/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    @font-face {
+        font-family: "Pictos";
+        src: url('//a.fsdn.com/con/css/fonts/sftheme/pictos-web.eot');
+        src: local("☺"), url('//a.fsdn.com/con/css/fonts/sftheme/pictos-web.woff') format('woff'), url('//a.fsdn.com/con/css/fonts/sftheme/pictos-web.ttf') format('truetype'), url('//a.fsdn.com/con/css/fonts/sftheme/pictos-web.svg') format('svg');
+    }
+</style>
+ <link rel="stylesheet" href="ruby-sphere%20%7C%20SourceForge.net_files/sf.css" type="text/css">
+
+
+    <style type="text/css">.sfdl { width:250px;height:48px;padding:0;position:relative;font:bold 12px/1.17 sans-serif !important; border:1px solid #aaa;display:inline;float:left;text-decoration:none;-moz-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-webkit-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-o-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;background:no-repeat #e5e5e5 8px center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #fff), color-stop(100%, #ccc));background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), -moz-linear-gradient(top, #fff 0%, #ccc 100%);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), linear-gradient(top, #fff 0%, #ccc 100%);background-position:8px center, 0 0;margin:0 10px 0px 0;overflow:hidden;color:#555 !important;}.sfdl:hover { cursor:pointer;text-decoration:none;background:8px center no-repeat #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC);}.sfdl-lite { background:0 center no-repeat #337733 none;color:white !important;height:auto;padding:0.5em 1em;text-align:center;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #339933), color-stop(100%, #337733));background-image:-moz-linear-gradient(top, #339933 0%, #337733 100%);background-image:linear-gradient(top, #339933 0%, #337733 100%);}.sfdl-lite:hover { background:0 center no-repeat #339933;}.sfdl span { border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;display:block;margin:3px;margin-left:35px;padding:4px;text-align:left;color:#FFF;background:#363;background-image:-moz-linear-gradient(center top, #393 0%, #373 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #393),color-stop(1, #373));background-image:linear-gradient(top, #393 0%, #373 100%);overflow:hidden;height:34px;}.sfdl b { display:block;line-height:17.0px;}.sfdl small { display:block;line-height:17.0px;color:#ADC2AD; font-weight:normal;white-space:nowrap;overflow:hidden;font-size:77%;}.info-circle{ right:10px;bottom:16px;}.direct-dl{ font-size:10px;text-align:right;display:inline-block;width:100%;}</style>
+
+<style type="text/css">
+    .xf1b60954dde9e50058468ec77bfad8fd13e05618 { display: none !important; }
+</style>
+    <link rel="alternate" type="application/rss+xml" title="ruby-sphere…File Releases" href="http://sourceforge.net/projects/ruby-sphere/rss?path=/">
+    <link rel="canonical" href="http://sourceforge.net/projects/ruby-sphere/">
+
+        
+<script type="text/javascript">
+    SF.adblock = true;
+    var immersion_adcode = "";
+</script><script src="ruby-sphere%20%7C%20SourceForge.net_files/mytube.js"></script>
+        
+  <script type="text/javascript">
+
+   (function() {
+         var useSSL = 'https:' === document.location.protocol;
+         var src = (useSSL ? 'https:' : 'http:') +
+               '//www.googletagservices.com/tag/js/gpt.js';
+         document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+   })();
+   </script><script src="ruby-sphere%20%7C%20SourceForge.net_files/gpt.js"></script><script src="ruby-sphere%20%7C%20SourceForge.net_files/check_359604.js" type="text/javascript" async=""></script><iframe class="xmnrrolzeoihkehdxkjd" style="visibility: hidden; display: none;" src="ruby-sphere%20%7C%20SourceForge.net_files/container.html"></iframe><mytubeelement data="{&quot;bundle&quot;:{&quot;label_delimitor&quot;:&quot;:&quot;,&quot;percentage&quot;:&quot;%&quot;,&quot;smart_buffer&quot;:&quot;Smart Buffer&quot;,&quot;start_playing_when_buffered&quot;:&quot;Start playing when buffered&quot;,&quot;sound&quot;:&quot;Sound&quot;,&quot;desktop_notification&quot;:&quot;Desktop Notification&quot;,&quot;continuation_on_next_line&quot;:&quot;-&quot;,&quot;loop&quot;:&quot;Loop&quot;,&quot;only_notify&quot;:&quot;Only Notify&quot;,&quot;estimated_time&quot;:&quot;Estimated Time&quot;,&quot;global_preferences&quot;:&quot;Global Preferences&quot;,&quot;no_notification_supported_on_your_browser&quot;:&quot;No notification style supported on your browser version&quot;,&quot;video_buffered&quot;:&quot;Video Buffered&quot;,&quot;buffered&quot;:&quot;Buffered&quot;,&quot;hyphen&quot;:&quot;-&quot;,&quot;buffered_message&quot;:&quot;The video has been buffered as requested and is ready to play.&quot;,&quot;not_supported&quot;:&quot;Not Supported&quot;,&quot;on&quot;:&quot;On&quot;,&quot;off&quot;:&quot;Off&quot;,&quot;click_to_enable_for_this_site&quot;:&quot;Click to enable for this site&quot;,&quot;desktop_notification_denied&quot;:&quot;You have denied permission for desktop notification for this site&quot;,&quot;notification_status_delimitor&quot;:&quot;;&quot;,&quot;error&quot;:&quot;Error&quot;,&quot;adblock_interferance_message&quot;:&quot;Adblock (or similar extension) is known to interfere with SmartVideo. Please add this url to adblock whitelist.&quot;,&quot;calculating&quot;:&quot;Calculating&quot;,&quot;waiting&quot;:&quot;Waiting&quot;,&quot;will_start_buffering_when_initialized&quot;:&quot;Will start buffering when initialized&quot;,&quot;will_start_playing_when_initialized&quot;:&quot;Will start playing when initialized&quot;,&quot;completed&quot;:&quot;Completed&quot;,&quot;buffering_stalled&quot;:&quot;Buffering is stalled. Will stop.&quot;,&quot;stopped&quot;:&quot;Stopped&quot;,&quot;hr&quot;:&quot;Hr&quot;,&quot;min&quot;:&quot;Min&quot;,&quot;sec&quot;:&quot;Sec&quot;,&quot;any_moment&quot;:&quot;Any Moment&quot;,&quot;popup_donate_to&quot;:&quot;Donate to&quot;,&quot;extension_id&quot;:null},&quot;prefs&quot;:{&quot;desktopNotification&quot;:true,&quot;soundNotification&quot;:true,&quot;logLevel&quot;:0,&quot;enable&quot;:true,&quot;loop&quot;:false,&quot;hidePopup&quot;:false,&quot;autoPlay&quot;:false,&quot;autoBuffer&quot;:false,&quot;autoPlayOnBuffer&quot;:false,&quot;autoPlayOnBufferPercentage&quot;:42,&quot;autoPlayOnSmartBuffer&quot;:true,&quot;quality&quot;:&quot;default&quot;,&quot;fshd&quot;:false,&quot;onlyNotification&quot;:false,&quot;enableFullScreen&quot;:true,&quot;saveBandwidth&quot;:false,&quot;hideAnnotations&quot;:false,&quot;turnOffPagedBuffering&quot;:false}}" event="preferencesUpdated" id="myTubeRelayElementToPage"></mytubeelement><mytubeelement data="{&quot;loadBundle&quot;:true}" event="relayPrefs" id="myTubeRelayElementToTab"></mytubeelement>
+
+   <!-- GPT Slot Definitions -->
+   <script type="text/javascript">
+       /*global googletag */
+       var gptadslots=[];
+       var gptadHandlers={};
+       googletag.cmd.push(function() {
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_728x90_A', [728, 90], 'div-gpt-ad-1394209358853-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dcopt', 'ist')
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '728x90')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+             gptadslots.push(googletag.defineOutOfPageSlot('/4140/ostg.sourceforge/SF_ProjectSum_728x90_A', 'div-gpt-ad-1394209358853-0_oop')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dcopt', 'ist')
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '728x90')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_HubIcon_200x90_A', [200, 90], 'div-gpt-ad-1394209358854-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '200x90')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_300x250_A', [[300, 250], [300, 600], [300, 1050]], 'div-gpt-ad-1394209358855-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x250,300x600,300x1050')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_300x250_B', [300, 250], 'div-gpt-ad-1394209358856-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x250')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_300x250_C', [300, 250], 'div-gpt-ad-1394209358857-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x250')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_TextLink_1x1_A', [1, 1], 'div-gpt-ad-1394209358858-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '1x1')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_TextLink_1x1_B', [1, 1], 'div-gpt-ad-1394209358859-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '1x1')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_ProjectSum_728x90_B', [728, 90], 'div-gpt-ad-1392148208790-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '728x90')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_RWPSP_300x87_A', [300, 87], 'div-gpt-ad-1392148208791-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x87')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadHandlers['/4140/ostg.sourceforge/SF_RWPSP_300x87_A'] =  'revealIfDelivers';
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_RWPSP_300x87_B', [300, 87], 'div-gpt-ad-1392148208792-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x87')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadHandlers['/4140/ostg.sourceforge/SF_RWPSP_300x87_B'] =  'revealIfDelivers';
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_RWEVPSP_300x87_A', [300, 87], 'div-gpt-ad-1392148208793-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x87')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadHandlers['/4140/ostg.sourceforge/SF_RWEVPSP_300x87_A'] =  'revealIfDelivers';
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_RWEVPSP_300x87_B', [300, 87], 'div-gpt-ad-1392148208794-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '300x87')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadHandlers['/4140/ostg.sourceforge/SF_RWEVPSP_300x87_B'] =  'revealIfDelivers';
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_Bookend_Left', [150, 1060], 'div-gpt-ad-139343511-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '150x1060')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            gptadslots.push(googletag.defineSlot('/4140/ostg.sourceforge/SF_Bookend_Right', [150, 1060], 'div-gpt-ad-139343512-0')
+                                                    .addService(googletag.pubads())
+                                                        .setTargeting('tpc', ['ruby-sphere', 'astronomy', 'ruby', 'scientific'])
+                                                        .setTargeting('shortname', 'ruby-sphere')
+                                                        .setTargeting('aud', ['scienceresearch'])
+                                                        .setTargeting('dc_ref', 'http://sourceforge.net/projects/ruby-sphere/')
+                                                        .setTargeting('sz', '150x1060')
+                                                        .setTargeting('u', 'e:b49d8ac4-e6dc-11e4-94c9-0200ac1d1d91')
+                                                        .setTargeting('page_type', 'pg_project'));
+            
+            googletag.pubads().enableSyncRendering();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                var unitName = event.slot.b.b;
+                if ( unitName in gptadHandlers ) {
+                   try {
+                       SF.Ads.RenderHandlers[gptadHandlers[unitName]].call(this, event);
+                   } catch (e) {
+                   }
+                }
+            });
+        });
+   </script><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/pubads_impl_59.js"></script>
+        
+
+        <script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/adframe.js"></script>
+        <script type="text/javascript">
+
+            /*jshint ignore:start*/
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            /*jshint ignore:end*/
+
+            //var $ = jQuery.noConflict(); // jshint ignore:line
+        </script>
+        <script type="text/javascript">
+                ga('create', 'UA-36130941-1', {'name': '1'});
+                ga('create', 'UA-36130941-1', 'auto');
+            if (typeof _ml !== 'undefined' && _ml.us) {
+                if (_ml.us.tp && _ml.us.tp.length > 0) {
+                    ga('set', 'dimension2', _ml.us.tp[0]);
+                }
+                if (_ml.us.pc && _ml.us.pc.length > 0) {
+                    ga('set', 'dimension7', _ml.us.pc[0]);
+                }
+                ga('set', 'dimension3', _ml.us.ind);
+                ga('set', 'dimension4', _ml.us.cr);
+                ga('set', 'dimension5', _ml.us.cs);
+                ga('set', 'dimension6', _ml.us.dm);
+                ga('set', 'dimension8', _ml.us.sn);
+            }
+                ga('send', 'pageview', {'title': '1'} );
+        </script>
+    <style type="text/css">.fancybox-margin{margin-right:15px !important;}</style></head>
+    <body id="pg_project" class="bluesteel user">
+        
+        <div class="fancybox-margin" style="display: none;" id="busy-spinner"></div>
+        
+<header id="site-header">
+    <div class="wrapper">
+        <a href="http://sourceforge.net/" class="logo">
+            <span>SourceForge</span>
+        </a>
+        <form method="get" action="/directory/">
+            <input id="words" name="q" placeholder="Search" type="text">
+        </form>
+        <!--Switch to {language}-->
+        <nav id="nav-site">
+            <a href="http://sourceforge.net/directory/" title="Browse our software.">Browse</a>
+            <a href="http://sourceforge.net/directory/enterprise" title="Browse our Enterprise software.">Enterprise</a>
+            <a href="http://sourceforge.net/blog/" title="Read the latest news from the SF HQ.">Blog</a>
+            <a href="http://sourceforge.net/support" title="Contact us for help and feedback.">Help</a>
+            <a href="http://sourceforge.net/jobs?source=header" title="Search 80k+ tech jobs." class="featured-link">Jobs</a>
+        </nav>
+        <nav id="nav-account">
+            
+              <div class="logged_out">
+                  <a href="https://sourceforge.net/auth/">Log In</a>
+                <span>or</span>
+                <a href="https://sourceforge.net/user/registration">Join</a>
+              </div>
+            
+        </nav>
+    </div>
+</header>
+<header id="site-sec-header">
+    <div class="wrapper">
+        <nav id="nav-hubs">
+            <h4>Solution Centers</h4>
+            <a href="http://goparallel.sourceforge.net/">Go Parallel</a>
+            <a href="http://apmsolutions.sourceforge.net/">Performance Central</a>
+        </nav>
+        <nav id="nav-collateral">
+            
+            <a href="http://library.slashdotmedia.com/?source=sfnet_header">Resources</a>
+            
+            
+            <a href="https://sourceforge.net/user/registration">Newsletters</a>
+            
+        </nav>
+    </div>
+</header>
+
+
+        
+        <div id="messages">
+        </div>
+
+        <div id="page-body">
+<div id="banner-ads" class="ads">
+
+
+
+
+    
+
+<div id="SF_ProjectSum_728x90_A_wrapped" class="ad leaderboard  " data-unit="SF_ProjectSum_728x90_A">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358853-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358853-0');
+        });
+        document.write('<div id="div-gpt-ad-1394209358853-0_oop"></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358853-0_oop');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358853-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_007"></script><div id="div-gpt-ad-1394209358853-0_oop"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_003"></script>
+</div>
+
+
+
+
+    
+
+<div id="SF_ProjectSum_HubIcon_200x90_A_wrapped" class="ad hub  " data-unit="SF_ProjectSum_HubIcon_200x90_A">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358854-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358854-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358854-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads"></script>
+</div>
+</div><nav id="breadcrumbs">
+    <ul>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/">Home</a></li>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory">Browse</a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory/science-engineering/">Science &amp; Engineering</a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory/science-engineering/astronomy/">Astronomy</a></li><li class="project">ruby-sphere</li>
+    </ul>
+</nav>
+
+
+<div id="project-header">
+    
+<section id="project-icon" class="noneditable">
+    <img itemscope="" itemtype="http://schema.org/ImageObject" itemprop="image" alt="ruby-sphere Icon" src="ruby-sphere%20%7C%20SourceForge.net_files/icon.png" height="48" width="48">
+</section>
+<section id="project-title">
+    <h1 itemprop="name">
+            ruby-sphere</h1>
+            <span id="dev-status" class="beta">beta</span>
+    <p id="maintainers" itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="with-icon">
+    Brought to you by:
+    <a href="http://sourceforge.net/users/tomono" itemprop="url"><span itemprop="name">tomono</span></a></p>
+    
+</section>
+</div>
+<article id="project" class="content-wrapper" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+    <meta itemprop="image" content="http://a.fsdn.com/allura/p/ruby-sphere/icon">
+    <nav>
+        
+    <div class="firstwave">
+        <ul class="b-hornav droppy">
+            
+            <li id="menu_consume_summary" class="selected">
+                <a href="http://sourceforge.net/projects/ruby-sphere/?source=navbar"><span>Summary</span></a>
+                
+            </li>
+            
+            <li id="menu_consume_files">
+                <a href="http://sourceforge.net/projects/ruby-sphere/files/?source=navbar"><span>Files</span></a>
+                
+            </li>
+            
+            <li id="menu_consume_reviews">
+                <a href="http://sourceforge.net/projects/ruby-sphere/reviews?source=navbar"><span>Reviews</span></a>
+                
+            </li>
+            
+            <li id="menu_consume_support">
+                <a href="http://sourceforge.net/projects/ruby-sphere/support?source=navbar"><span>Support</span></a>
+                
+            </li>
+            
+            <li id="menu_consume_wiki">
+                <a href="http://sourceforge.net/p/ruby-sphere/wiki/?source=navbar"><span>Wiki</span></a>
+                
+            </li>
+            
+            <li class="subnav" id="menu_consume_tickets ▾">
+                <a href="http://sourceforge.net/p/ruby-sphere/_list/tickets?source=navbar"><span>Tickets ▾</span></a>
+                
+                <ul>
+                    
+                    <li><a href="http://sourceforge.net/p/ruby-sphere/bugs/?source=navbar">Bugs</a></li>
+                    
+                    <li><a href="http://sourceforge.net/p/ruby-sphere/feature-requests/?source=navbar">Feature Requests</a></li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li id="menu_consume_news">
+                <a href="http://sourceforge.net/p/ruby-sphere/news/?source=navbar"><span>News</span></a>
+                
+            </li>
+            
+            <li id="menu_consume_code">
+                <a href="http://sourceforge.net/p/ruby-sphere/code/?source=navbar"><span>Code</span></a>
+                
+            </li>
+            
+        </ul>
+    </div>
+    
+    </nav>
+
+    <div id="browser-warning-placeholder"></div>
+
+    
+    <section style="min-height: 486px;" id="main-content">
+        <section id="call-to-action">
+	
+            <section id="counts-sharing">
+                <section class="project-info">
+                    <section class="content">
+                        <b data-icon="" class="ico" title="Star">★</b>
+                        <a href="http://sourceforge.net/projects/ruby-sphere/reviews/" title="Add a review" id="call-to-action-reviews">Add a Review</a>
+                    </section>
+                </section>
+                <section id="download-stats" class="project-info">
+                    <section class="content">
+                        <b data-icon="}" class="ico ico-downarrow" title="Down"></b>
+                        <a href="http://sourceforge.net/projects/ruby-sphere/files/stats/timeline" title="Downloads This Week" id="call-to-action-stats">1 Download</a>
+                        <span>(This Week)</span>
+                    </section>
+                </section>
+                <section id="last-updated" class="project-info">
+                    <section class="content">
+                        <b data-icon="\" class="ico ico-calendar" title="Last Update"></b>
+                        Last Update:
+                        <time class="dateUpdated" datetime="2013-04-17">2013-04-17</time>
+                    </section>
+                </section>
+
+                
+            </section>
+
+            <section id="download_button">
+                    
+                        
+                        
+<a title="" oldtitle="Download /ruby-sphere/ruby-sphere-0.6.1/ruby-sphere-0.6.1.tar.gz from SourceForge  - 475.3 kB" data-hasqtip="0" href="http://sourceforge.net/projects/ruby-sphere/files/latest/download" class="sfdl">
+    <span>
+        <b>Download</b>
+        <small>ruby-sphere-0.6.1.tar.gz</small>
+        
+    </span>
+</a>
+
+                    <meta itemprop="fileSize" content="475317"><meta itemprop="fileFormat" content="application/x-gzip; charset=binary"><div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="Free">
+                        <link itemprop="availability" href="http://schema.org/InStock">
+                    </div>
+                    <a href="http://sourceforge.net/projects/ruby-sphere/files/" id="files-link" title="Browse All Files">Browse All Files</a>
+                    <section class="project-info">
+                        
+                    </section>
+            </section>
+        </section>
+
+        
+
+        <section class="enhanced" id="project-screenshots">
+            <header>
+                <h2>Screenshots</h2>
+            </header>
+            <div class="slider"><div title="Previous" class="previous disabled">‹</div>
+                <div style="visibility: visible; opacity: 1;" class="strip">
+                    <a rel="section" class="thumbnail fancybox" href="http://a.fsdn.com/con/app/proj/ruby-sphere/screenshots/9491.jpg" title="sky from Mauna Kea on the night of December 8, 2004">
+                        <img itemprop="screenshot" src="ruby-sphere%20%7C%20SourceForge.net_files/137.jpeg" alt="sky from Mauna Kea on the night of December 8, 2004" height="137" width="182">
+                    </a>
+                </div>
+            <div title="Next" class="next disabled">›</div></div>
+        </section>
+
+        <section id="project-description">
+            <header>
+                <h2>Description</h2>
+            </header>
+            <p id="description" itemprop="description">ruby-sphere is a 
+set of libraries and user interfaces written in Ruby to calculate 
+apparent positions of stars with a moderate accuracy. Its goal is to 
+provide an easy way to plan astronomical observations.</p>
+            <p>
+            <a id="homepage" class="pspbtn" href="http://ruby-sphere.sourceforge.net/" title="ruby-sphere Web Site" rel="nofollow">ruby-sphere Web Site</a>
+            </p>
+        </section>
+
+        <section id="project-categories-and-license">
+            <div class="project-container">
+                <section>
+                    <header>
+                        <h4>Categories</h4>
+                    </header><a href="http://sourceforge.net/directory/science-engineering/astronomy/" itemprop="softwareApplicationSubCategory">Astronomy</a></section>
+                <section>
+                    <section class="project-info">
+    <header>
+        <h3>License</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/license:gpl/">GNU General Public License version 2.0 (GPLv2)</a></section>
+</section>
+
+
+                </section>
+            </div>
+        </section>
+
+        
+	  <div class="psp_newsletter_subscribe">
+	      <h3>KEEP ME UPDATED</h3>
+	    <span class="subscribe-tagline">Get project updates, sponsored content
+		    from our select <br>partners, and more.
+	    </span>
+	    
+
+<form action="https://sourceforge.net/user/newsletters/subscribe?source=PSP" method="post" class="newsletter-subscribe-form">
+    <input name="X3IrdpBRGDb6Z1rGUI08tA9fLToE" value="/user/newsletters/thankyou" type="hidden">
+    <input name="X2JvXtRNAGqSyjcWERXWBr4KHDAM" value="US" type="hidden">
+    <input name="Xx5vXtRNAGqSyjcWERRLptPT32L4" value="ip_address" type="hidden">
+    <input name="X0ovXtQ9XDeX2mqnil5XMlXTf1cU" value="PSP" type="hidden">
+    <input name="X35bdtw5YDamZi9iTGFbu2IMyY40" value="sitewide" type="hidden">
+    <input name="X35bdtw5YDamZi9iTGFbu2IMyY40" value="research" type="hidden">
+    <input name="X35bdtw5YDamZi9iTGFbu2IMyY40" value="events" type="hidden">
+    <input name="X35bdtw5YDamZi9iTGFbu2IMyY40" value="thirdparty" type="hidden">
+    <input name="X35bdtw5YDamZi9iTGFbu2IMyY40" value="all" type="hidden">
+    <input name="X15PVtUUvHN7vWXK2brjAtZ9fAwQ" value="ruby-sphere" type="hidden">
+    <input name="X247ZrBRQCamIsdiFUzj2r7mez9g" id="email_validate_result" type="hidden">
+    <input value="https://sourceforge.net/user/newsletters/validate_email" id="email_validate_endpoint" type="hidden">
+
+    <div class="subtext">
+	    By clicking on "Follow" below, you are agreeing to the <a href="http://slashdotmedia.com/terms-of-use/">Terms of Use</a> and the <a href="http://slashdotmedia.com/privacy-statement/">Privacy Policy</a>.
+    </div>
+
+    
+        <div id="nsw-error-container">
+            <div id="nsw-error"></div>
+            <input id="text-subscriber-email" class="subscriber-email" name="X0Z3VoRRYUMaZ7ahX:BvULtvrpQE" placeholder="Enter your email address" required="" type="email">
+        </div>
+        
+    
+
+    <p class="subscriber-existing-email" style="display: none"> Sent to None.
+        
+    </p>
+
+    <button type="submit" class="subscriber-submit">
+        <span>
+            Follow
+        </span>
+    </button>
+
+    <input name="_visit_cookie" value="5491f7945228cb11ae9801f9" type="hidden">
+    <input name="timestamp" value="1429479632" type="hidden">
+    <input name="spinner" value="X1Pi4wH00aN3t7qrgIE2a24GFu9s" type="hidden">
+    <p class="xf1b60954dde9e50058468ec77bfad8fd13e05618"><label for="X05DXrhhNWO3V9d7jIvpCjc9w4bU">You seem to have CSS turned off. Please don't fill out this field.</label><input id="X05DXrhhNWO3V9d7jIvpCjc9w4bU" name="X0pDXrhhNWOX2mqnil5XMlXTf1cU" type="text"></p>
+    <p class="xf1b60954dde9e50058468ec77bfad8fd13e05618"><label for="X05DXrhhNWOzV9d7jIvpCjc9w4bU">You seem to have CSS turned off. Please don't fill out this field.</label><input id="X05DXrhhNWOzV9d7jIvpCjc9w4bU" name="X0pDXrhhNWeX2mqnil5XMlXTf1cU" type="text"></p>
+</form>
+
+
+          </div>
+
+        <section id="reviews-n-ratings">
+            <header>
+                <a class="pspbtn" href="http://sourceforge.net/projects/ruby-sphere/reviews/new">Write a Review</a>
+                <h2>User Reviews</h2>
+            </header>
+            <section class="content">
+                        <p>Be the first to <a href="http://sourceforge.net/projects/ruby-sphere/reviews/new">post a review</a> of ruby-sphere!</p>
+            </section>
+        </section>
+
+        <section id="project-additional-trove">
+            <header>
+                <h2>Additional Project Details</h2>
+            </header>
+            <div class="project-container">
+                <section class="project-info">
+    <header>
+        <h3>Languages</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/natlanguage:english/" itemprop="inLanguage">English</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>Intended Audience</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/audience:scienceresearch/">Science/Research</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>User Interface</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/environment:ui_commandline/">Command-line</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>Programming Language</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/language:ruby/">Ruby</a></section>
+</section>
+
+
+                <section class="project-info">
+                    <header>
+                        <h4>Registered</h4>
+                    </header>
+                    <section class="content">
+                        2004-10-19
+                    </section>
+                </section>
+            </div>
+        </section>
+        <section class="ads text">
+            
+
+
+
+    
+
+<div id="SF_TextLink_1x1_A_wrapped" class="ad text  " data-unit="SF_TextLink_1x1_A">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358858-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358858-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358858-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_004"></script>
+</div>
+            
+
+
+
+    
+
+<div id="SF_TextLink_1x1_B_wrapped" class="ad text  " data-unit="SF_TextLink_1x1_B">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358859-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358859-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358859-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_008"></script>
+</div>
+        </section></section>
+
+    <section id="sidebar">
+        <section class="ads">
+            
+
+
+
+    
+    
+
+<div id="SF_ProjectSum_300x250_A_wrapped" class="ad multisize  " data-unit="SF_ProjectSum_300x250_A">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358855-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358855-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358855-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_005"></script>
+</div>
+            
+
+
+
+    
+
+<div id="SF_ProjectSum_300x250_B_wrapped" class="ad medrec  " data-unit="SF_ProjectSum_300x250_B">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358856-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358856-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358856-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_011"></script>
+</div>
+        </section>
+        <aside class="sidebar-widget">
+	<header>
+        <h3>Recommended Projects</h3>
+	</header>
+    <ul class="vertical">
+        
+          
+
+
+
+    
+
+<li id="SF_RWPSP_300x87_A_wrapped" class="ad  ads_native revealIfDelivers" data-unit="SF_RWPSP_300x87_A">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1392148208791-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1392148208791-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1392148208791-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_002"></script>
+</li>
+          
+
+
+
+    
+
+<li id="SF_RWPSP_300x87_B_wrapped" class="ad  ads_native revealIfDelivers" data-unit="SF_RWPSP_300x87_B">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1392148208792-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1392148208792-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1392148208792-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_010"></script>
+</li>
+        
+
+        
+
+            
+                <li class="item odd">
+                <a href="http://sourceforge.net/projects/gnuplot/?source=recommended" title="gnuplot development"><img alt="Icon" src="ruby-sphere%20%7C%20SourceForge.net_files/icon_002.png"></a>
+                <div class="pinfo-content recommended">
+                <a class="project-name" href="http://sourceforge.net/projects/gnuplot/?source=recommended" title="Learn more about gnuplot development ">gnuplot development</a>
+                <div class="summary">
+                A portable, multi-platform, command-line driven graphing utility
+                </div>
+                </div>
+
+            </li>
+            
+                <li class="item even">
+                <a href="http://sourceforge.net/projects/virtualmoon/?source=recommended" title="Virtual Moon Atlas"><img alt="Icon" src="ruby-sphere%20%7C%20SourceForge.net_files/project_default.png"></a>
+                <div class="pinfo-content recommended">
+                <a class="project-name" href="http://sourceforge.net/projects/virtualmoon/?source=recommended" title="Learn more about Virtual Moon Atlas ">Virtual Moon Atlas</a>
+                <div class="summary">
+                
+                </div>
+                </div>
+
+            </li>
+            
+                <li class="item odd last">
+                <a href="http://sourceforge.net/projects/winscp/?source=recommended" title="WinSCP ::"><img alt="Icon" src="ruby-sphere%20%7C%20SourceForge.net_files/icon_003.png"></a>
+                <div class="pinfo-content recommended">
+                <a class="project-name" href="http://sourceforge.net/projects/winscp/?source=recommended" title="Learn more about WinSCP :: ">WinSCP ::</a>
+                <div class="summary">
+                Free FTP and SFTP client for Windows
+                </div>
+                </div>
+
+            </li>
+            
+        
+    </ul>
+</aside>
+
+
+    
+<script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/apiresults.js"></script>
+<aside class="sidebar-widget jobs-widget">
+    <header>
+        <h3>
+            <span style="display: none;" id="itjb_at"><a href="http://www.theitjobboard.co.uk/">jobs</a> by <a id="itjb-logo-container" href="http://www.theitjobboard.co.uk/">ITJB</a></span>
+            <span style="display: none;" id="indeed_at"><a href="http://www.indeed.com/">jobs</a> by <a href="http://www.indeed.com/" title="Job Search"><img src="ruby-sphere%20%7C%20SourceForge.net_files/indeed_logo.gif" class="provider-logo" alt="Indeed job search"></a></span>
+            <span style="display: inline;" id="dice_at">
+                Powered by
+                <a href="http://www.dice.com/?CMPID=AF_SF_UP_JS_AV_OG_BN_&amp;utm_source=SourceForge&amp;utm_medium=Affiliate&amp;utm_content=&amp;utm_campaign=Advocacy_Ongoing"> <img src="ruby-sphere%20%7C%20SourceForge.net_files/dice_logo.png" alt="Dice Logo" class="dice-logo"> </a>
+            </span>
+            Latest Tech Jobs
+        </h3>
+    </header>
+    <section>
+        <form action="/jobs/" method="get" id="job-search">
+            <input name="source" value="widget" type="hidden">
+            <input name="text" placeholder="Senior Java Developer (Job Title)" id="job-title" type="text">
+            <input name="submit" value="Find" id="job-search-button" type="submit">
+        </form>
+    </section>
+    <ul id="job-listing">
+    
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://www.dice.com/job/result/10277223/004635?src=19&amp;utm_medium=Affiliate&amp;CMPID=AF_SF_UP_JS_AV_OG_SR_&amp;source=76&amp;utm_campaign=Advocacy_Ongoing&amp;utm_source=SourceForge" onmousedown="">Technical Analyst - (e.g., CVP, PG, CUSP)</a></span>
+        <span class="job-details">Sysintelli, Inc. - Bloomington, IL</span>
+    </li>
+    
+    <li class="item odd">
+    <span class="job-link"><a href="http://www.dice.com/job/result/10115700a/408766?src=19&amp;utm_medium=Affiliate&amp;CMPID=AF_SF_UP_JS_AV_OG_SR_&amp;source=76&amp;utm_campaign=Advocacy_Ongoing&amp;utm_source=SourceForge" onmousedown="">Node.js Developer</a></span>
+        <span class="job-details">Randstad Technologies - Rolling Meadows, IL</span>
+    </li>
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://www.dice.com/job/result/10115720/966630?src=19&amp;utm_medium=Affiliate&amp;CMPID=AF_SF_UP_JS_AV_OG_SR_&amp;source=76&amp;utm_campaign=Advocacy_Ongoing&amp;utm_source=SourceForge" onmousedown="">Contract opening for SAP WM - Independent only</a></span>
+        <span class="job-details">Quinnox Inc - lincolnshire, IL</span>
+    </li>
+    
+    <li class="item odd">
+    <span class="job-link"><a href="http://www.dice.com/job/result/10122703/RSRCBIL?src=19&amp;utm_medium=Affiliate&amp;CMPID=AF_SF_UP_JS_AV_OG_SR_&amp;source=76&amp;utm_campaign=Advocacy_Ongoing&amp;utm_source=SourceForge" onmousedown="">HP UCMDB Support Engineer</a></span>
+        <span class="job-details">Reliable Software Resources - Bloomington, IL</span>
+    </li>
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://www.dice.com/job/result/RTX1635ec/933135?src=19&amp;utm_medium=Affiliate&amp;CMPID=AF_SF_UP_JS_AV_OG_SR_&amp;source=76&amp;utm_campaign=Advocacy_Ongoing&amp;utm_source=SourceForge" onmousedown="">SAP FICO Lead Analyst</a></span>
+        <span class="job-details">Ingredion Incorporated - Westchester, IL</span>
+    </li>
+    
+    
+</ul>
+   <section class="all-jobs" style="border: none;">
+        <a href="http://sourceforge.net/jobs?source=widget">See All Jobs ››</a>
+    </section>
+</aside>
+
+<script type="text/javascript">
+    /*global Handlebars*/
+    $(function($) {
+        var source = $('#jobwidget-template').html();
+        var template = Handlebars.compile(source);
+
+
+        function load_jobBoard() {
+            $.ajax({
+                url:'/jobs/json',
+                success: function(data) {
+                    $('#job-listing').html(template(data));
+                    var provider_name = data.provider_name, attrib_id;
+                    switch (provider_name) {
+                        case 'itjb':
+                            var itjb_link = 'http://www.' + data.itjb_links["US"] + '?' + data.itjb_tracker.logo;
+                            $('#itjb_at a').prop('href', itjb_link);
+                            attrib_id = '#itjb_at';
+                            $('#job-listing li a').each(function (index, element) {
+                                var href = $(element).prop('href');
+                                href += '&' + data.itjb_tracker.link;
+                                $(element).prop('href', href);
+                            });$('#itjb-logo-container').html('<img src="//a.fsdn.com/con/img/jobs/ITJB_us.jpg" class="provider-logo" alt="ITJB job search" />');break;
+                        case 'indeed':
+                            attrib_id = '#indeed_at';
+                        break;
+                        default:
+                            attrib_id = '#dice_at';
+                        break;
+                    }
+                    $(attrib_id).show().siblings().hide();
+                },
+                dataType: 'json'
+            });
+        }
+        load_jobBoard();
+    });
+</script>
+
+<script type="text/x-handlebars-template" id="jobwidget-template">
+    
+    {{#stripe data.jobs 5 true}}
+    <li class="item {{css_class}}">
+    <span class="job-link"><a href="{{ this.url }}" onmousedown="{{ this.onmousedown }}">{{ this.title }}</a></span>
+        <span class="job-details">{{ this.company}} - {{ this.location}}</span>
+    </li>
+    {{/stripe}}
+    
+</script>
+
+    <section class="ads">
+        
+
+
+
+    
+
+<div id="SF_ProjectSum_300x250_C_wrapped" class="ad medrec  " data-unit="SF_ProjectSum_300x250_C">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1394209358857-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1394209358857-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1394209358857-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_006"></script>
+</div>
+    </section>
+        
+
+<aside class="sidebar-widget project-activity-widget" id="project-activity"></aside>
+
+<script type="text/x-handlebars-template" id="project-activity-template">
+    
+    <header>
+        <h3>
+            Project Activity
+            <a id="follow-action" href="{{followee.activity_url}}activity/follow?source=project_activity" title="{{followee.activity_name}}"{{#if following}} class="active"{{/if}}>
+                <b data-icon="S" class="ico ico-star"></b>
+            </a>
+            <a href="{{followee.activity_url}}activity/feed?source=project_activity" title="RSS"><b data-icon="f" class="ico ico-feed"></b></a>
+        </h3>
+    </header>
+    <ul>
+        {{#stripe timeline 5 false}}
+        <li class="item {{css_class}}">
+            <h4>
+                {{#ifTagged "release"}}
+                  {{ cap this.verb }}
+                {{else}}
+                  {{ icon this.actor.activity_extras.icon_url }}
+                  {{ activity_obj this.actor }}
+                  {{ this.verb }}
+                {{/ifTagged}}
+                {{ activity_obj this.obj }}
+                {{#if this.target.activity_name}} on {{ activity_obj this.target }}{{/if}}
+            </h4>
+            {{#if this.obj.activity_extras.summary}}
+              <p>{{ this.obj.activity_extras.summary }}</p>
+            {{/if}}
+            <time datetime="{{ this.published }}" title="{{ this.published }}">{{ ago this.published }}</time>
+        </li>
+        {{/stripe}}
+    </ul>
+    <a class="all-activities" href="{{followee.activity_url}}activity?source=project_activity">See All Activities &rsaquo;&rsaquo;</a>
+    
+</script>
+
+        <a id="report-inappropriate" href="http://sourceforge.net/projects/ruby-sphere/report_inappropriate">Report inappropriate content</a>
+    </section>
+</article>
+        </div>
+  
+    <div class="project-footer-adcontainer">
+    
+
+
+
+    
+
+<div id="SF_ProjectSum_728x90_B_wrapped" class="ad leaderboard  " data-unit="SF_ProjectSum_728x90_B">
+<script type="text/javascript">
+/*global googletag */
+(function(){
+    var immersionCompliment = false;
+    
+    if ((!immersion_adcode && !immersionCompliment)  || (immersion_adcode && immersionCompliment)) {
+        document.write('<div id="div-gpt-ad-1392148208790-0" ></div>');
+        googletag.cmd.push(function() {
+            googletag.display('div-gpt-ad-1392148208790-0');
+        });
+    }
+})();
+</script><div id="div-gpt-ad-1392148208790-0"></div><script type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/ads_009"></script>
+</div>
+    </div>
+  
+
+        
+
+          
+<footer id="site-footer">
+    <div class="wrapper">
+        <nav>
+            <h5>SourceForge</h5>
+            <a href="http://sourceforge.net/about">About</a>
+            <a href="http://sourceforge.net/blog/category/sitestatus/">Site Status</a>
+            <a href="http://twitter.com/sfnet_ops">@sfnet_ops</a>
+            
+
+        </nav>
+        <nav>
+            <h5>Find and Develop Software</h5>
+            <a href="http://sourceforge.net/create/">Create a Project</a>
+            <a href="http://sourceforge.net/directory/">Software Directory</a>
+            <a href="http://sourceforge.net/top">Top Downloaded Projects</a>
+        </nav>
+        <nav>
+            <h5>Community</h5>
+            <a href="http://sourceforge.net/blog/">Blog</a>
+            <a href="http://twitter.com/sourceforge">@sourceforge</a>
+            <a href="http://sourceforge.net/jobs?source=footer">Job Board</a>
+            <a href="http://library.slashdotmedia.com/?source=sfnet_footer">Resources</a>
+        </nav>
+        <nav>
+            <h5>Help</h5>
+            <a href="http://p.sf.net/sourceforge/docs">Site Documentation</a>
+            <a href="http://sourceforge.net/support">Support Request</a>
+            <a href="http://p.sf.net/sourceforge/irc">Real-Time Support</a>
+        </nav>
+    </div>
+</footer>
+<footer id="site-copyright-footer">
+    <div class="wrapper">
+        <div id="copyright">
+            Copyright © 2015 Dice. All Rights Reserved.<br>
+            SourceForge is a <a href="http://www.diceholdingsinc.com/phoenix.zhtml?c=211152&amp;p=irol-landing">Dice Holdings, Inc.</a> service.
+        </div>
+        <nav>
+            <a href="http://slashdotmedia.com/terms-of-use/">Terms</a>
+            <a href="http://slashdotmedia.com/privacy-statement/">Privacy</a>
+            <span id="teconsent"></span>
+            <a href="http://slashdotmedia.com/opt-out-choices/">Opt Out Choices</a>
+
+
+            <a href="http://slashdotmedia.com/">Advertise</a>
+            <a href="http://sourceforge.jp/">SourceForge.JP</a>
+            <a href="http://apmsolutions.sourceforge.net/">Performance</a>
+        </nav>
+    </div>
+</footer>
+            <script src="ruby-sphere%20%7C%20SourceForge.net_files/sf_002.js" type="text/javascript"></script>
+        
+        <!-- Begin comScore Tag -->
+        <script src="ruby-sphere%20%7C%20SourceForge.net_files/beacon.js"></script>
+        <script type="text/javascript">
+            if (window.COMSCORE) {
+                COMSCORE.beacon({
+                    c1: 2,
+                    c2: 6035546,
+                    c3: "",
+                    c4: "",
+                    c5: "",
+                    c6: "",
+                    c15: ""
+                });
+            }
+        </script>
+        <noscript>
+            <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6035546&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cj=1" alt="comScore2" />
+        </noscript>
+        <!-- End comScore Tag -->
+<script type="text/javascript">
+    SF.enableEmailVerify = true;
+</script>
+
+<div id="screenshots-callout-content" class="callout">
+    <a href="http://sourceforge.net/p/ruby-sphere/admin/screenshots">Screenshots can attract more users to your project.</a>
+</div>
+<div id="features-callout-content" class="callout">
+    <a href="http://sourceforge.net/projects/ruby-sphere/edit">Features can attract more users to your project.</a>
+</div>
+<script src="ruby-sphere%20%7C%20SourceForge.net_files/callouts.js"></script>
+
+<div id="icon-dialog" title="Change the project icon">
+    <form action="/projects/ruby-sphere/update" method="post" enctype="multipart/form-data">
+        <input name="_visit_cookie" value="5491f7945228cb11ae9801f9" type="hidden">
+        <label for="icon">Upload a new icon</label>
+        <div class="field">
+            <input name="icon" id="icon" class="file" type="file">
+        </div>
+        <p class="help">Icons must be PNG, GIF, or JPEG and less than 1 MiB in size.  They will be displayed as 48x48 images.</p>
+    </form>
+</div>
+
+
+
+            <script id="truste_0.603528676522192" type="text/javascript" src="ruby-sphere%20%7C%20SourceForge.net_files/get"></script><script async="async" src="ruby-sphere%20%7C%20SourceForge.net_files/notice"></script>
+            
+<div style="width: auto; height: auto; display: block;" class="fancybox-overlay fancybox-overlay-fixed"><div style="width: 666px; height: auto; position: absolute; top: 20px; left: 171px; opacity: 1; overflow: visible;" class="fancybox-wrap fancybox-desktop fancybox-type-image" tabindex="-1"><div style="padding: 15px; width: auto; height: auto;" class="fancybox-skin"><div class="fancybox-outer"><div style="overflow: visible; width: 636px; height: 477px;" class="fancybox-inner"><img class="fancybox-image" src="ruby-sphere%20%7C%20SourceForge.net_files/9491.jpg" alt=""></div></div><div class="fancybox-title fancybox-title-float-wrap"><span class="child">sky from Mauna Kea on the night of December 8, 2004</span></div></div></div></div></body></html>

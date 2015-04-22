@@ -1,0 +1,128 @@
+<!--?xml version="1.0" ?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ruby-sphere-0.6.1 README</title>
+<link href="ruby-sphere.css" type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="mytube.css"><script src="ruby-sphere-0.6.1%20README_files/mutationObserver.js"></script><script src="ruby-sphere-0.6.1%20README_files/mytube.js"></script></head>
+<body>
+<h1><a name="label-0" id="label-0">ruby-sphere README</a></h1><!-- RDLabel: "ruby-sphere README" -->
+<p><a href="http://ruby-sphere.sourceforge.net/">ruby-sphere</a> is an
+application to calculate apparent positions of stars with a moderate
+accuracy.</p>
+<h2><a name="label-1" id="label-1">Requirements</a></h2><!-- RDLabel: "Requirements" -->
+<dl>
+<dt><a name="label-2" id="label-2">Ruby 1.8 </a><a href="http://www.ruby-lang.org/">&lt;URL:http://www.ruby-lang.org/&gt;</a> or newer.</dt><!-- RDLabel: "Ruby 1.8  or newer." -->
+<dd>
+optparse is required by bin/visibility.
+Might also work on Ruby 1.6.x with ruby-sumo but not tested.
+</dd>
+<dt><a name="label-3" id="label-3">gnuplot </a><a href="http://www.gnuplot.info/">&lt;URL:http://www.gnuplot.info/&gt;</a></dt><!-- RDLabel: "gnuplot " -->
+<dd>
+Visibility plot is created through gnuplot.
+</dd>
+</dl>
+<h2><a name="label-4" id="label-4">Download</a></h2><!-- RDLabel: "Download" -->
+<ul>
+<li>Latest version at
+  <a href="http://sourceforge.net/project/showfiles.php?group_id=122091">&lt;URL:http://sourceforge.net/project/showfiles.php?group_id=122091&gt;</a>.</li>
+<li>Cutting edge version via
+  <a href="http://sourceforge.net/cvs/?group_id=122091">cvs</a>.</li>
+</ul>
+<h2><a name="label-5" id="label-5">Install</a></h2><!-- RDLabel: "Install" -->
+<p>De-compress archive and enter its top directory.
+Then type:</p>
+<pre>($ su)
+# ruby setup.rb</pre>
+<p>These simple step installs this program under the default location of
+Ruby libraries.  You can also install files into your favorite directory
+by supplying <code>setup.rb</code> some options. Try "<kbd>ruby setup.rb --help</kbd>".</p>
+<p>If you want to install the library under /usr/local, you might want to
+run</p>
+<pre>$ ruby setup.rb config --prefix=/usr/local --siteruby=/usr/local/lib/ruby/site_ruby
+$ ruby setup.rb setup
+# ruby setup.rb install</pre>
+<h3><a name="label-6" id="label-6">Useful make targets</a></h3><!-- RDLabel: "Useful make targets" -->
+<p>Following targets are provided for users.
+Have a look in Makefile for other targets.</p>
+<dl>
+<dt><a name="label-7" id="label-7">test (default)</a></dt><!-- RDLabel: "test (default)" -->
+<dd>
+run the tests
+</dd>
+<dt><a name="label-8" id="label-8">install/config/setup</a></dt><!-- RDLabel: "install/config/setup" -->
+<dd>
+same as "<kbd>ruby setup.rb install</kbd>", "<kbd>ruby setup.rb config</kbd>",
+or "<kbd>ruby setup.rb setup</kbd>"
+</dd>
+<dt><a name="label-9" id="label-9">doc</a></dt><!-- RDLabel: "doc" -->
+<dd>
+create API document as HTML files in the doc/ directory
+</dd>
+</dl>
+<h2><a name="label-10" id="label-10">Usage</a></h2><!-- RDLabel: "Usage" -->
+<p>Try</p>
+<pre>$ ruby -I./lib bin/visibility -c sample/planets.conf</pre>
+<p>before installation or</p>
+<pre>$ visibility -c sample/planets.conf</pre>
+<p>after installation.</p>
+<p>Please have a look in sample/planets.conf for a brief description of
+configuration files.</p>
+<p>You can also build your own
+applications referring <a href="http://ruby-sphere.sourceforge.net/doc/index.html">the API document</a>.</p>
+<h2><a name="label-11" id="label-11">Contact</a></h2><!-- RDLabel: "Contact" -->
+<p>Please report bugs and patches, request for features at <a href="http://sourceforge.net/tracker/?group_id=122091">the SourceForge.net Trackers</a>.</p>
+<h2><a name="label-12" id="label-12">Limitations</a></h2><!-- RDLabel: "Limitations" -->
+<p>The package currently aims to provide an easy-to-use way of planning
+observations. This is not suitable to acquire your target into your
+telescope field of view.</p>
+<h3><a name="label-13" id="label-13">Time scales</a></h3><!-- RDLabel: "Time scales" -->
+<ul>
+<li>All calculations are done on J2000.0: Greenwich apparent sidereal time is
+  assumed to be the same as Greenwich mean sidereal time.</li>
+<li>TT: terrestrial time is assumed to be the same as UTC: coordinated
+  universal time.</li>
+</ul>
+<h3><a name="label-14" id="label-14">Coordinates</a></h3><!-- RDLabel: "Coordinates" -->
+<ul>
+<li><p>Aberrations of light (20 arcsec for non-solar system objects):</p>
+<ul>
+<li>annual aberration,</li>
+<li>planetary aberration,</li>
+<li>differential aberration, and</li>
+<li>light-deflection,</li>
+</ul>
+<p>nutation, and precession are not taken into account.</p></li>
+</ul>
+<h3><a name="label-15" id="label-15">Planets</a></h3><!-- RDLabel: "Planets" -->
+<ul>
+<li>Position precision of planets are more or less 0.01 degrees with no
+  perturbations taken into account.</li>
+<li>Positions of the Moon, as long as other planets and stars, are calculated
+  with geocentric coordinates. The Moon as viewed from a place on the
+  earth is different up to +/- 1 degree.</li>
+<li>Moon phase is calculated using geocentric coordinates.</li>
+</ul>
+<h3><a name="label-16" id="label-16">Conversions to Azimuth and Elevation</a></h3><!-- RDLabel: "Conversions to Azimuth and Elevation" -->
+<ul>
+<li>Atmospheric dispersion (35 arcmin at horizon) is not taken into account.</li>
+<li>The earth is assumed to be perfectly spherical.</li>
+</ul>
+<h2><a name="label-17" id="label-17">License</a></h2><!-- RDLabel: "License" -->
+<p>Copyright (C) 2004 Daigo Tomono &lt;dtomono at freeshell.org&gt; unless
+otherwise stated.</p>
+<p>This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+<a href="GPL.txt">GNU General Public License</a> for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</p>
+
+
+
+<mytubeelement data="{&quot;bundle&quot;:{&quot;label_delimitor&quot;:&quot;:&quot;,&quot;percentage&quot;:&quot;%&quot;,&quot;smart_buffer&quot;:&quot;Smart Buffer&quot;,&quot;start_playing_when_buffered&quot;:&quot;Start playing when buffered&quot;,&quot;sound&quot;:&quot;Sound&quot;,&quot;desktop_notification&quot;:&quot;Desktop Notification&quot;,&quot;continuation_on_next_line&quot;:&quot;-&quot;,&quot;loop&quot;:&quot;Loop&quot;,&quot;only_notify&quot;:&quot;Only Notify&quot;,&quot;estimated_time&quot;:&quot;Estimated Time&quot;,&quot;global_preferences&quot;:&quot;Global Preferences&quot;,&quot;no_notification_supported_on_your_browser&quot;:&quot;No notification style supported on your browser version&quot;,&quot;video_buffered&quot;:&quot;Video Buffered&quot;,&quot;buffered&quot;:&quot;Buffered&quot;,&quot;hyphen&quot;:&quot;-&quot;,&quot;buffered_message&quot;:&quot;The video has been buffered as requested and is ready to play.&quot;,&quot;not_supported&quot;:&quot;Not Supported&quot;,&quot;on&quot;:&quot;On&quot;,&quot;off&quot;:&quot;Off&quot;,&quot;click_to_enable_for_this_site&quot;:&quot;Click to enable for this site&quot;,&quot;desktop_notification_denied&quot;:&quot;You have denied permission for desktop notification for this site&quot;,&quot;notification_status_delimitor&quot;:&quot;;&quot;,&quot;error&quot;:&quot;Error&quot;,&quot;adblock_interferance_message&quot;:&quot;Adblock (or similar extension) is known to interfere with SmartVideo. Please add this url to adblock whitelist.&quot;,&quot;calculating&quot;:&quot;Calculating&quot;,&quot;waiting&quot;:&quot;Waiting&quot;,&quot;will_start_buffering_when_initialized&quot;:&quot;Will start buffering when initialized&quot;,&quot;will_start_playing_when_initialized&quot;:&quot;Will start playing when initialized&quot;,&quot;completed&quot;:&quot;Completed&quot;,&quot;buffering_stalled&quot;:&quot;Buffering is stalled. Will stop.&quot;,&quot;stopped&quot;:&quot;Stopped&quot;,&quot;hr&quot;:&quot;Hr&quot;,&quot;min&quot;:&quot;Min&quot;,&quot;sec&quot;:&quot;Sec&quot;,&quot;any_moment&quot;:&quot;Any Moment&quot;,&quot;popup_donate_to&quot;:&quot;Donate to&quot;,&quot;extension_id&quot;:null},&quot;prefs&quot;:{&quot;desktopNotification&quot;:true,&quot;soundNotification&quot;:true,&quot;logLevel&quot;:0,&quot;enable&quot;:true,&quot;loop&quot;:false,&quot;hidePopup&quot;:false,&quot;autoPlay&quot;:false,&quot;autoBuffer&quot;:false,&quot;autoPlayOnBuffer&quot;:false,&quot;autoPlayOnBufferPercentage&quot;:42,&quot;autoPlayOnSmartBuffer&quot;:true,&quot;quality&quot;:&quot;default&quot;,&quot;fshd&quot;:false,&quot;onlyNotification&quot;:false,&quot;enableFullScreen&quot;:true,&quot;saveBandwidth&quot;:false,&quot;hideAnnotations&quot;:false,&quot;turnOffPagedBuffering&quot;:false}}" event="preferencesUpdated" id="myTubeRelayElementToPage"></mytubeelement><mytubeelement data="{&quot;loadBundle&quot;:true}" event="relayPrefs" id="myTubeRelayElementToTab"></mytubeelement></body></html>

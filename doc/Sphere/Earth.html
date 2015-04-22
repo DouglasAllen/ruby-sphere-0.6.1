@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Sphere::Earth - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-cartesian">::cartesian</a>
+    
+    <li ><a href="#method-c-geodetic">::geodetic</a>
+    
+    <li ><a href="#method-i-apparent_from">#apparent_from</a>
+    
+    <li ><a href="#method-i-cartesian-3D">#cartesian=</a>
+    
+    <li ><a href="#method-i-eccentricity2">#eccentricity2</a>
+    
+    <li ><a href="#method-i-geodetic-3D">#geodetic=</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Sphere::Earth">
+  <h1 id="class-Sphere::Earth" class="class">
+    class Sphere::Earth
+  </h1>
+
+  <section class="description">
+    
+<p><a href="Earth.html">Earth</a> as a spheroid</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-alt" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">alt</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-lat" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lat</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-lon" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lon</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-u" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">u</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-v" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">v</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-w" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">w</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-cartesian" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cartesian</span><span
+            class="method-args">(u, v, w)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cartesian-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">cartesian</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">w</span>)
+  <span class="ruby-identifier">r</span> = <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">r</span>.<span class="ruby-identifier">cartesian</span> = [<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">w</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-geodetic" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">geodetic</span><span
+            class="method-args">(lon, lat, alt = 0)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="geodetic-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">geodetic</span>(<span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span>, <span class="ruby-identifier">alt</span> = <span class="ruby-value">0</span>)
+  <span class="ruby-identifier">r</span> = <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">r</span>.<span class="ruby-identifier">geodetic</span> = [<span class="ruby-identifier">lon</span>, <span class="ruby-identifier">lat</span>, <span class="ruby-identifier">alt</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-apparent_from" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apparent_from</span><span
+            class="method-args">(observatory)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>azimuth, elevation, distance of self seen from ((<code>observatory</code>))</p>
+          
+          
+
+          
+          <div class="method-source-code" id="apparent_from-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apparent_from</span>(<span class="ruby-identifier">observatory</span>)
+  <span class="ruby-identifier">du</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">u</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">u</span>
+  <span class="ruby-identifier">dv</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">v</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">v</span>
+  <span class="ruby-identifier">dw</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">w</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">w</span>
+  <span class="ruby-identifier">d</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">du</span><span class="ruby-operator">*</span><span class="ruby-identifier">du</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dv</span><span class="ruby-operator">*</span><span class="ruby-identifier">dv</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dw</span><span class="ruby-operator">*</span><span class="ruby-identifier">dw</span>)
+
+  <span class="ruby-comment"># rotation by lon around w</span>
+  <span class="ruby-identifier">dx</span> =  <span class="ruby-identifier">du</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lon</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">dv</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lon</span>)
+  <span class="ruby-identifier">dy</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">du</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lon</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">dv</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lon</span>)
+  <span class="ruby-identifier">dz</span> =  <span class="ruby-identifier">dw</span>
+
+  <span class="ruby-comment"># rotation by lat around y</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">dx</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lat</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">dz</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lat</span>)
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">dy</span>
+  <span class="ruby-identifier">z</span> = <span class="ruby-identifier">dx</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lat</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">dz</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">observatory</span>.<span class="ruby-identifier">lat</span>)
+
+  <span class="ruby-identifier">az</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">y</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">x</span>)
+  <span class="ruby-identifier">el</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">z</span>, <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">*</span><span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span><span class="ruby-operator">*</span><span class="ruby-identifier">y</span>))
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">az</span>, <span class="ruby-identifier">el</span>, <span class="ruby-identifier">d</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cartesian-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cartesian=</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cartesian-3D-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cartesian=</span>(<span class="ruby-identifier">args</span>)        <span class="ruby-comment"># u, v, w in meter</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:size</span>) <span class="ruby-keyword">and</span> <span class="ruby-value">3</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;wrong number of arguments (expecting 3)&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@u</span>, <span class="ruby-ivar">@v</span>, <span class="ruby-ivar">@w</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+
+  <span class="ruby-ivar">@lon</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">v</span>, <span class="ruby-identifier">u</span>)
+  <span class="ruby-identifier">uv</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">u</span><span class="ruby-operator">*</span><span class="ruby-identifier">u</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">v</span><span class="ruby-operator">*</span><span class="ruby-identifier">v</span>)
+  <span class="ruby-identifier">t_lat1</span> = <span class="ruby-identifier">w</span><span class="ruby-operator">/</span><span class="ruby-identifier">uv</span>
+  <span class="ruby-identifier">t_lat2</span> = (<span class="ruby-identifier">semimajor_axis</span><span class="ruby-operator">*</span><span class="ruby-identifier">eccentricity2</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">uv</span>
+  <span class="ruby-identifier">t_lat</span> = <span class="ruby-value">0.0</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">p_lat</span> = <span class="ruby-identifier">t_lat</span>
+    <span class="ruby-identifier">t_lat</span> = <span class="ruby-identifier">t_lat1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t_lat2</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">t_lat</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1</span> <span class="ruby-operator">+</span> (<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">eccentricity2</span>)<span class="ruby-operator">*</span><span class="ruby-identifier">t_lat</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>))
+  <span class="ruby-keyword">end</span> <span class="ruby-keyword">while</span> (<span class="ruby-identifier">t_lat</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p_lat</span>).<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1e-8</span>
+  <span class="ruby-ivar">@lat</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan</span>(<span class="ruby-identifier">t_lat</span>)
+
+  <span class="ruby-ivar">@alt</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t_lat</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>) <span class="ruby-operator">*</span> (<span class="ruby-identifier">w</span><span class="ruby-operator">/</span><span class="ruby-identifier">t_lat</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">semimajor_axis</span><span class="ruby-operator">*</span>(<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">eccentricity2</span>)<span class="ruby-operator">/</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1</span><span class="ruby-operator">+</span>(<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">eccentricity2</span>)<span class="ruby-operator">*</span><span class="ruby-identifier">t_lat</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>)))
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-eccentricity2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">eccentricity2</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="eccentricity2-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eccentricity2</span>   <span class="ruby-comment"># square of eccentricity</span>
+  <span class="ruby-value">1.0</span><span class="ruby-operator">-</span>(<span class="ruby-value">1.0</span><span class="ruby-operator">-</span><span class="ruby-identifier">oblateness</span>)<span class="ruby-operator">**</span><span class="ruby-value">2</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-geodetic-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">geodetic=</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="geodetic-3D-source">
+            <pre><span class="ruby-comment"># File lib/sphere/satellite.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">geodetic=</span>(<span class="ruby-identifier">args</span>) <span class="ruby-comment"># lon, lat in radian, alt in meter</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:size</span>) <span class="ruby-keyword">and</span> <span class="ruby-value">3</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;wrong number of arguments (expecting 3)&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@lon</span>, <span class="ruby-ivar">@lat</span>, <span class="ruby-ivar">@alt</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+
+  <span class="ruby-comment"># http://wwwsoc.nii.ac.jp/geod-soc/web-text/part2/2-1/2-1-6.html</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">semimajor_axis</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">eccentricity2</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@lat</span>)<span class="ruby-operator">**</span><span class="ruby-value">2</span>)
+
+  <span class="ruby-ivar">@u</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@alt</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@lat</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@lon</span>)
+  <span class="ruby-ivar">@v</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@alt</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@lat</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@lon</span>)
+  <span class="ruby-ivar">@w</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@alt</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">eccentricity2</span><span class="ruby-operator">*</span><span class="ruby-identifier">n</span>)<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@lat</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

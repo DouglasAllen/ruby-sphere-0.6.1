@@ -1,0 +1,62 @@
+# vim: set et ts=2 sw=2 tw=72:
+# $Id: README.ja,v 1.5 2004/12/21 00:31:21 tomono Exp $
+=begin
+= ruby-sphere README
+
+((<ruby-sphere|URL:http://ruby-sphere.sourceforge.net>))は天体の位置を計
+算するためのライブラリとコマンド群です。最新の情報についてはREADME.enを
+参照してください。
+
+== 必要環境
+* Ruby 1.8 ((<URL:http://www.ruby-lang.org/>))
+* gnuplot ((<URL:http://www.gnuplot.info/>))
+
+== ダウンロード
+((<SourceForge.netのProject summary|URL:http://ruby-sphere.sourceforge.net>))
+をご覧ください。
+
+== インストール方法
+コマンドラインで以下のようにうちこんでください。
+UNIX系のOSではおそらくrootの権限が必要になります。
+  ($ su)
+  # ruby setup.rb
+
+インストール先を変更したりすることもできます。
+((%ruby setup.rb --help%))を試してみてください。
+
+== 簡単な使い方
+インストール前には下記のように
+  $ ruby -I./lib bin/visibility -c sample/planets.conf
+インストール後には下記のように
+  $ visibility -c sample/planets.conf
+試してみてください。
+
+((<API document|URL:index.html>))を参照して
+独自のアプリケーションを製作することもできます。
+
+== バグなどのレポート先
+((<SourceForge.net Trackers|URL:http://sourceforge.net/tracker/?group_id=122091>))
+にお願いします。
+
+== 制限事項
+README.enをご覧ください。
+
+== ライセンス
+Copyright (C) 2004 Daigo Tomono <dtomono at freeshell.org> unless
+otherwise stated.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+((<GNU General Public License|URL:GPL.txt>)) for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+=end

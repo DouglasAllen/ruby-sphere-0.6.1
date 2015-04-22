@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Sphere::Planet - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="SolarSystemBody.html">Sphere::SolarSystemBody</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-ax">#ax</a>
+    
+    <li ><a href="#method-i-cc">#cc</a>
+    
+    <li ><a href="#method-i-ec">#ec</a>
+    
+    <li ><a href="#method-i-elements">#elements</a>
+    
+    <li ><a href="#method-i-inc">#inc</a>
+    
+    <li ><a href="#method-i-lambdabeta">#lambdabeta</a>
+    
+    <li ><a href="#method-i-ll">#ll</a>
+    
+    <li ><a href="#method-i-ma">#ma</a>
+    
+    <li ><a href="#method-i-ml">#ml</a>
+    
+    <li ><a href="#method-i-mpg">#mpg</a>
+    
+    <li ><a href="#method-i-omg">#omg</a>
+    
+    <li ><a href="#method-i-pnl">#pnl</a>
+    
+    <li ><a href="#method-i-rr">#rr</a>
+    
+    <li ><a href="#method-i-ta">#ta</a>
+    
+    <li ><a href="#method-i-tb">#tb</a>
+    
+    <li ><a href="#method-i-uu">#uu</a>
+    
+    <li ><a href="#method-i-xyz">#xyz</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Sphere::Planet">
+  <h1 id="class-Sphere::Planet" class="class">
+    class Sphere::Planet
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-c" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">c</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-time" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">time</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>from “Ko-tenmongaku” 1989, Saito, Kuniji, Kousei-sha</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-ax" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ax</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>semi-major axis (AU, earth radius for <a href="Moon.html">Moon</a>)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ax-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ax</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@ax</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cc</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cc-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cc</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">uubuf</span> = <span class="ruby-identifier">uu</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">t</span> = ( <span class="ruby-identifier">uubuf</span> <span class="ruby-operator">*</span> <span class="ruby-value">2.0</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> ).<span class="ruby-identifier">truncate</span>.<span class="ruby-identifier">to_f</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> ( ( <span class="ruby-identifier">t</span> <span class="ruby-operator">+</span> <span class="ruby-value">1.0</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">2.0</span> ).<span class="ruby-identifier">truncate</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">offset</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> ( ( <span class="ruby-identifier">t</span> <span class="ruby-operator">-</span> <span class="ruby-value">1.0</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">2.0</span> ).<span class="ruby-identifier">truncate</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan</span>( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-ivar">@inc</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">tan</span>( <span class="ruby-identifier">uubuf</span> ) ) <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ec" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ec</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>eccentricity (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ec-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 331</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ec</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@ec</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-elements" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">elements</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>oribital elements: [ ml, pnl, omg, inc, ec, ax ]</p>
+          
+          
+
+          
+          <div class="method-source-code" id="elements-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">elements</span>
+  [ <span class="ruby-ivar">@ml</span>, <span class="ruby-ivar">@pnl</span>, <span class="ruby-ivar">@omg</span>, <span class="ruby-ivar">@inc</span>, <span class="ruby-ivar">@ec</span>, <span class="ruby-ivar">@ax</span> ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inc</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>inclination (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="inc-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 325</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inc</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@inc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-lambdabeta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lambdabeta</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="LambdaBeta.html">LambdaBeta</a> at a given <a
+href="../Time.html">Time</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="lambdabeta-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lambdabeta</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">s</span> = <span class="ruby-constant">Sun</span>.<span class="ruby-identifier">new</span>( <span class="ruby-ivar">@time</span> ).<span class="ruby-identifier">xyz</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-identifier">xyz</span>
+  <span class="ruby-identifier">ex</span>, <span class="ruby-identifier">ey</span>, <span class="ruby-identifier">ez</span> = <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">p</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">p</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">p</span>[<span class="ruby-value">2</span>]
+  <span class="ruby-constant">LambdaBeta</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>( <span class="ruby-identifier">ey</span>, <span class="ruby-identifier">ex</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span><span class="ruby-operator">*</span><span class="ruby-value">2</span> ),                       <span class="ruby-identifier">ez</span><span class="ruby-operator">/</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>( <span class="ruby-identifier">ex</span><span class="ruby-operator">*</span><span class="ruby-identifier">ex</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ey</span><span class="ruby-operator">*</span><span class="ruby-identifier">ey</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ez</span><span class="ruby-operator">*</span><span class="ruby-identifier">ez</span> ) )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ll" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ll</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ll-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ll</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">cc</span>( <span class="ruby-identifier">time</span> ) <span class="ruby-operator">+</span> <span class="ruby-ivar">@omg</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ma" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ma</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>mean anomaly</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ma-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ma</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  ( <span class="ruby-ivar">@ml</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@pnl</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ml" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ml</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>mean longitude (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ml-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ml</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@ml</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mpg" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mpg</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Mittelpunktsgleichung (euqation of center)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mpg-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mpg</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@mpg</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-omg" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">omg</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>longitude of ascending node (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="omg-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">omg</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@omg</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pnl" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pnl</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>periherlion mean longitude (rad)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pnl-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pnl</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@pnl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rr</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>oribital radius</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rr-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rr</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-ivar">@ax</span><span class="ruby-operator">*</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@ec</span><span class="ruby-operator">*</span><span class="ruby-ivar">@ec</span>)<span class="ruby-operator">/</span>(<span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@ec</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">ta</span> ))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ta</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>true anomaly</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ta-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ta</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  ( <span class="ruby-ivar">@ml</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@pnl</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@mpg</span> ) <span class="ruby-operator">%</span> ( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tb" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tb</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tb-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tb</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan</span>( <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">tan</span>( <span class="ruby-ivar">@inc</span> )<span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">cc</span>( <span class="ruby-identifier">time</span> ) ) )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-uu" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">uu</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="uu-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uu</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">ta</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@pnl</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@omg</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xyz" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xyz</span><span
+            class="method-args">( time = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>rectangular coordinate</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xyz-source">
+            <pre><span class="ruby-comment"># File lib/sphere/star.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xyz</span>( <span class="ruby-identifier">time</span> = <span class="ruby-keyword">nil</span> )
+  <span class="ruby-identifier">_update_pars</span>( <span class="ruby-identifier">time</span> )
+  <span class="ruby-identifier">uubuf</span> = <span class="ruby-identifier">uu</span>
+  <span class="ruby-identifier">cosuu</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-identifier">uubuf</span> )
+  <span class="ruby-identifier">sinuu</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-identifier">uubuf</span> )
+  <span class="ruby-identifier">cosomg</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-ivar">@omg</span> )
+  <span class="ruby-identifier">sinomg</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-ivar">@omg</span> )
+  <span class="ruby-identifier">cosinc</span> = <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>( <span class="ruby-ivar">@inc</span> )
+  <span class="ruby-identifier">rrbuf</span> = <span class="ruby-identifier">rr</span>
+  [ <span class="ruby-identifier">rrbuf</span><span class="ruby-operator">*</span>( <span class="ruby-identifier">cosuu</span><span class="ruby-operator">*</span><span class="ruby-identifier">cosomg</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">sinuu</span><span class="ruby-operator">*</span><span class="ruby-identifier">sinomg</span><span class="ruby-operator">*</span><span class="ruby-identifier">cosinc</span> ),         <span class="ruby-identifier">rrbuf</span><span class="ruby-operator">*</span>( <span class="ruby-identifier">cosuu</span><span class="ruby-operator">*</span><span class="ruby-identifier">sinomg</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sinuu</span><span class="ruby-operator">*</span><span class="ruby-identifier">cosomg</span><span class="ruby-operator">*</span><span class="ruby-identifier">cosinc</span> ),         <span class="ruby-identifier">rrbuf</span><span class="ruby-operator">*</span><span class="ruby-identifier">sinuu</span><span class="ruby-operator">*</span><span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>( <span class="ruby-ivar">@inc</span> ) ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
