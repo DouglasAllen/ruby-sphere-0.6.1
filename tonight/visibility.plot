@@ -82,11 +82,11 @@ set label 1010 "W" at 80,0 left front
 set label 1011 "" at -61.90277539574667,-17.981995507736013 point pt 11
 set label 1012 "" at -32.15776624846542,-31.717889606825512 point pt 13
 set label 1013 "" at -0.45460994983410163,-36.161304892093234 point pt 15
-set label 1014 "" at -71.6452243223374,-15.51432884196931 point pt 11
-set label 1015 "" at -42.20536731561442,-32.19226012442328 point pt 13
-set label 1016 "" at -10.257341443938802,-39.20579069255405 point pt 15
-set label 1017 "" at -44.75402146888548,-32.64080101518481 point pt 13
-set label 1018 "" at -12.731834480105338,-40.2614099083386 point pt 15
+set label 1014 "" at -71.486747020801,-15.550820374680242 point pt 11
+set label 1015 "" at -42.043209628894076,-32.18154023898607 point pt 13
+set label 1016 "" at -10.099828387709644,-39.15494022477284 point pt 15
+set label 1017 "" at -44.72502191162445,-32.63608283230296 point pt 13
+set label 1018 "" at -12.703932517781272,-40.249836122989215 point pt 15
 set label 1019 "" at -55.91360298366812,-45.77894379665864 point pt 15
 plot "Jupiter.dat" using ($3+90):(90-$4) notitle with lines, "Mars.dat" using ($3+90):(90-$4) notitle with lines, "Venus.dat" using ($3+90):(90-$4) notitle with lines, "Mercury.dat" using ($3+90):(90-$4) notitle with lines, "Sun.dat" using ($3+90):(90-$4) notitle with lines
 unset label 1019
