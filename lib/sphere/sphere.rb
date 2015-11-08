@@ -14,7 +14,7 @@ module Sphere
   def self::az_at_el( lat, el, dec )
     denom = -Math::cos( lat )*Math::cos( el )
     return nil if 0.0 == denom
-    f = ( Math::sin( dec ) - Math::sin( lat )*Math::sin( el ) ) / denom
+    f = ( Math::sin( dec ) - Math::sin( lat ) * Math::sin( el ) ) / denom
     return nil if 1 < f.abs
     Math::acos( f )
     # from "Tentai-no Keisan Kyoushitsu" 1998, Saida, Hiroshi, Chijin-shokan
@@ -23,6 +23,11 @@ module Sphere
   # number of centuries from AD1900 Jan 1 12:00 UT
   def self::c1900( time )
     ( fjd( time ) - 2415021.0 )/36525.0
+  end
+
+  # number of centuries from AD2000 Jan 1 12:00 UT
+  def self::c2000( time )
+    ( fjd( time ) - 2451545.0 )/36525.0
   end
 
   # distance on the sphere between two points in radias
@@ -101,7 +106,7 @@ module Sphere
     end
   end
 
-  # Greenwith mean sidereal time in radians for a Time
+  # Greenwich mean sidereal time in radians for a Time
   # from Astronomical Almanac 2004 for J2000.0
   def self::gmst( time )
     tu = ( jd( time ) - 2451545.0 ) / 36525.0
@@ -288,4 +293,23 @@ module Sphere
     0.9972695663
   end
 
+end
+
+
+if __FILE__ == $PROGRAM_NAME
+
+  require 'date'
+  time = DateTime.now.to_time.utc
+
+  lat = 41.94788 * Math::PI / 180
+  dec = -10 * Math::PI / 180
+  lha = 0
+  el_sin = Math::sin(lat) * Math::sin(dec) + Math::cos(lat) * Math::cos(dec) * Math::cos(lha)
+  el  = Math::asin(el_sin)
+  
+  p Sphere::az_at_el( lat, el, dec ) * 180 / Math::PI
+  
+  p Sphere::jd(time)
+  p Sphere::gmst( time ) * 180 / Math::PI / 15
+  
 end

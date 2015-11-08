@@ -18,7 +18,7 @@ module Sphere
       # from Rika Nenpyo (Chronological Scientific Tables 2003), ed. National Astronomical Observatory of Japan
       'La Palma' => [ '-17 43'.dms_to_rad, '28 46'.dms_to_rad, 2426, 'Observatorio del Roque de Los Muchachos' ],
       'Chajnantor' => [ 67.5.to_rad, -23.to_rad, 5000 ],
-      'NIU' => ['-88.75'.dms_to_rad, '41.93'.dms_to_rad, 914], 
+      'NIU' => ['-88 44 34'.dms_to_rad, '41 56 52'.dms_to_rad, 914], 
       'Las Campanas' => [ '-70 42'.dms_to_rad, '-29 1'.dms_to_rad, 2300 ],
       'La Silla' => [ '-70 44'.dms_to_rad, '-29 15'.dms_to_rad, 2400 ],
       'Paranal' => [ '-70 24'.dms_to_rad, '-24 38'.dms_to_rad, 2635 ],
