@@ -30,12 +30,12 @@ def plot( device = 'x11', output = nil, tz='UTC', location='NIU' )
              t1, t2, Sphere::Observatory.of( location ) )
 	 )
   
-  plot.stars << Sphere::Jupiter.new
-  plot.stars << Sphere::Mars.new
-  plot.stars << Sphere::Venus.new
-  plot.stars << Sphere::Mercury.new
-  plot.stars << Sphere::Sun.new
-  #plot.stars << Sphere::Moon.new
+  # plot.stars << Sphere::Jupiter.new
+  # plot.stars << Sphere::Mars.new
+  # plot.stars << Sphere::Venus.new
+  # plot.stars << Sphere::Mercury.new
+  # plot.stars << Sphere::Sun.new
+  plot.stars << Sphere::Moon.new
 #
 #  plot.stars << Sphere::Star.new('18 30'.hms_to_rad, -10.to_rad, 'Scutum')
 #  plot.stars << Sphere::Star.new('18 45'.hms_to_rad, +36.to_rad, 'Lyra')
@@ -64,8 +64,9 @@ end
 
 if __FILE__ == $PROGRAM_NAME
 	
-  #plot
+  # plot
   plot( 'png', 'tonight.png' ).store_files( 'tonight' )
+  
   #puts 'Have a look at tonight/tonight.png'
 	
 end

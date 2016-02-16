@@ -164,7 +164,7 @@ module Sphere
     ( gmst( time ) + lon ) % ( 2.0 * Math::PI )
   end
 
-  # UT at a given LST near Time at londitude (rad)
+  # UT at a given LST near Time at longitude (rad)
   def self::lst_to_ut( time, lst, lon )
     Time.at( time + ( lst - self::lst( time, lon ) ).to_f * self::sidereal_day * 3600.0 * 12.0 / Math::PI )
   end
@@ -302,12 +302,6 @@ if __FILE__ == $PROGRAM_NAME
   time = DateTime.now.to_time.utc
 
   lat = 41.94788 * Math::PI / 180
-  dec = -10 * Math::PI / 180
-  lha = 0
-  el_sin = Math::sin(lat) * Math::sin(dec) + Math::cos(lat) * Math::cos(dec) * Math::cos(lha)
-  el  = Math::asin(el_sin)
-  
-  p Sphere::az_at_el( lat, el, dec ) * 180 / Math::PI
   
   p Sphere::jd(time)
   p Sphere::gmst( time ) * 180 / Math::PI / 15

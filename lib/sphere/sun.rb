@@ -10,7 +10,17 @@ module Sphere
 
     def name; 'Sun' end
 
+    def time( time = nil )
+      _update_pars( time )
+      @time
+    end
+
     def c1900( time = nil )
+      _update_pars( time )
+      @c
+    end
+
+    def c2000( time = nil )
       _update_pars( time )
       @c
     end
@@ -96,7 +106,7 @@ module Sphere
       return unless time
       return if @time == time
       @time = time
-      @c = Sphere::c1900( time )
+      @c = Sphere::c2000( time )
       @sml = (( 280.6824 + 36000.769325*@c + 7.22222e-4*@c*@c ) % 360.0 ).to_rad 
       @spl = (( 281.2206 + 1.717697*@c + 4.83333e-4*@c*@c + 2.77777e-6*@c*@c*@c ) % 360.0 ).to_rad
       @sec = 0.0167498 - 4.258e-5*@c - 1.37e-7*@c*@c

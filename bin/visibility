@@ -1,4 +1,4 @@
-#! /home/douglasallen/.rbenv/versions/2.2.0/bin/ruby
+#! C:/Ruby22/bin/ruby.exe
 #
 # visibility: CLI to plot visiblity maps
 #
