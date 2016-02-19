@@ -182,7 +182,7 @@ module Sphere
   # obliquity of the ecliptic
   # from "Ko-tenmongaku" 1989, Saito, Kuniji, Kousei-sha
   def self::obliquity( time )
-    ( 23.452  - 0.013012 * c1900( time ) ).to_rad
+    ( 23.452  - 0.013012 * c2000( time ) ).to_rad
   end
 
   # position angle (angle from north/zenith to east/right)

@@ -4,65 +4,75 @@ lib = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require File.expand_path('../../lib/sphere', __FILE__)
 
-lon = -88.743 * 180.0 / Math::PI
-gmst = Sphere.gmst(Time.now).to_deg / 15.0
-
-
 sun = Sphere::Sun.new
 
-time = sun.time(Time.now)
-lst = time.to_lst(lon)
-lst.to_deg / 15.0
-Sphere.lst_to_ut( time, lst, lon )
+p time = sun.time(Time.now)
+p date = time.to_date.to_time
+d = time.to_datetime.ajd - 2451545.0
+ecl = 23.4393 - 3.563E-7 * d
+el = -0.8333.to_rad
+lat = 41.948.to_rad
+lon = -88.743.to_rad
+
+# solar mean anomaly (rad)
+ma = sun.sma
+# solar eccentricity
+e = sun.sec(time)
+# solar eccentric anomaly 
+ea = ma + e * Math.sin(ma) * ( 1.0 + e * Math.cos(ma) )
+# x vector
+xv = Math.cos(ea) - e
+# y vector
+yv = Math.sqrt(1.0 - e * e) * Math.sin(ea)
+# solar true anomaly (rad)
+v = Math.atan2( yv, xv )
+r = Math.sqrt( xv * xv + yv * yv )
 
 sun.public_methods(false)
 sun.name
 sun.c2000(time)
-p sun.lambdabeta(time).lambda.to_deg
 sun.sml(time).to_deg
+sun.sta(time)
+
+# solar semi-major axis (AU)
 sun.sax
 sun.smpg(time).to_deg
-sun.sl(time).to_deg
+# solar longitude of perihelion (rad)
+w = sun.spl(time)
+lonsun = v + w
+xs = r * Math.cos(lonsun)
+xs = sun.xyz(time)[0]
+ys = r * Math.sin(lonsun)
+ys = sun.xyz(time)[1]
+
 sun.spr(time).to_deg
 sun.ss(time).to_deg
 sun.diameter(time).to_deg
 sun.xyz(time)
 sun.lambdabeta(time)
-
 # LambdaBeta at a given Time
 sun.lambdabeta(time).beta.to_deg
-# solar mean anomaly (rad)
-p ma = sun.sma
-# solar eccentricity
-p e = sun.sec(time)
-# solar eccentric anomaly 
-p ea = ma + e * Math.sin(ma) * ( 1.0 + e * Math.cos(ma) )
-# x vector
-p xv = Math.cos(ea) - e
-# y vector
-p yv = Math.sqrt(1.0 - e * e) * Math.sin(ea)
-# solar true anomaly (rad)
-p v = Math.atan2( yv, xv )
-p sun.sta(time)
-# solar semi-major axis (AU)
-p sun.sax
-p r = Math.sqrt( xv * xv + yv * yv )
-# solar longitude (rad)
-p w = sun.spl(time)
-p lonsun = v + w
-p sun.sl(time)
-p xs = r * Math.cos(lonsun)
-p ys = r * Math.sin(lonsun)
-p sun.xyz(time)
+sun.sl(time).to_deg
+sun.lambdabeta(time).lambda.to_deg
 
-ecl = 23.4393 - 3.563E-7 * time.to_datetime.ajd
-p xe = xs
-p ye = ys * Math.cos(ecl)
-p ze = ys * Math.sin(ecl)
-p ra  = Math.atan2( ye, xe )
-p dec = Math.atan2( ze, Math.sqrt(xe * xe + ye * ye) )
-p ra.to_deg / 15.0
-p dec.to_deg
+xe = xs
+ye = ys * Math.cos(ecl.to_rad)
+ze = ys * Math.sin(ecl.to_rad)
+
+ra  = Math.atan2( ye, xe ).to_deg
+ra = sun.radec(time).ra.to_deg / 15.0
+dec = Math.atan2( ze, Math.sqrt(xe * xe + ye * ye) ).to_deg
+dec = sun.radec(time).dec.to_deg
+
+p sun.rise_at( el, date, lon, lat )
+p sun.meridian_transit( date, lon )
+p sun.set_at( el, date, lon, lat )
+
+lst = time.to_lst(lon)
+Sphere.ra_to_ha( ra, lst ).to_deg
+lst.to_deg / 15.0
+p ut = Sphere.lst_to_ut( time, lst, lon )
+gmst = Sphere.gmst(ut)
 
 jupiter = Sphere::Jupiter.new
 jupiter.name
@@ -126,3 +136,9 @@ venus.xyz(time)
 venus.lambdabeta(time)
 venus.lambdabeta(time).lambda.to_deg
 venus.lambdabeta(time).beta.to_deg
+
+Sphere::GnuPlot.public_methods(false).sort
+Sphere::GnuPlot.public_instance_methods(false).sort
+
+Sphere::SolarSystemBody.public_methods(false).sort
+Sphere::SolarSystemBody.public_instance_methods(false).sort

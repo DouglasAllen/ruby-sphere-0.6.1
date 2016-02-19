@@ -14,13 +14,15 @@ require File.expand_path('../../lib/sphere', __FILE__)
 
 require_relative 'constellations'
 
-def plot( device = 'x11', output = nil, tz='UTC', location='NIU' )
-  offset = 15
+def plot( device = nil, output = nil, tz='UTC', location='NIU' )
+  
+  start = 12
+  offset = start + 12
   tzorig = ENV['TZ']
   ENV['TZ'] = tz
   now = Time.now
   #p firstday = (( now - offset*3600 ).to_a)[3..5].reverse + [24-offset]
-  p firstday = (( now).to_a)[3..5].reverse + [9]
+  p firstday = (( now).to_a)[3..5].reverse + [start]
   #p secondday = (( now - offset*3600 + 0*3600 ).to_a)[3..5].reverse + [offset]
   p secondday = (( now + 1*3600).to_a)[3..5].reverse + [offset]
   t1 = Time.local( *firstday )
@@ -34,8 +36,8 @@ def plot( device = 'x11', output = nil, tz='UTC', location='NIU' )
   # plot.stars << Sphere::Mars.new
   # plot.stars << Sphere::Venus.new
   # plot.stars << Sphere::Mercury.new
-  # plot.stars << Sphere::Sun.new
-  plot.stars << Sphere::Moon.new
+  plot.stars << Sphere::Sun.new
+  # plot.stars << Sphere::Moon.new
 #
 #  plot.stars << Sphere::Star.new('18 30'.hms_to_rad, -10.to_rad, 'Scutum')
 #  plot.stars << Sphere::Star.new('18 45'.hms_to_rad, +36.to_rad, 'Lyra')
@@ -68,5 +70,7 @@ if __FILE__ == $PROGRAM_NAME
   plot( 'png', 'tonight.png' ).store_files( 'tonight' )
   
   #puts 'Have a look at tonight/tonight.png'
+  # set terminal png
+  # set output 'tonight.png'
 	
 end
