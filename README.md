@@ -1,6 +1,8 @@
 # ruby-sphere-0.6.1
 my reorganized version of the same and some other experiments
 
+    cd sample
+
     lib = File.expand_path('../../lib', __FILE__)
     $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
     require File.expand_path('../../lib/sphere', __FILE__)
