@@ -6,8 +6,8 @@ require File.expand_path('../../lib/sphere', __FILE__)
 
 sun = Sphere::Sun.new
 
-p time = sun.time(Time.now)
-p date = time.to_date.to_time
+time = sun.time(Time.now)
+date = time.to_date.to_time
 d = time.to_datetime.ajd - 2451545.0
 ecl = 23.4393 - 3.563E-7 * d
 el = -0.8333.to_rad
@@ -29,7 +29,7 @@ v = Math.atan2( yv, xv )
 r = Math.sqrt( xv * xv + yv * yv )
 
 sun.public_methods(false)
-sun.name
+p sun.name
 sun.c2000(time)
 sun.sml(time).to_deg
 sun.sta(time)
@@ -63,19 +63,38 @@ ra  = Math.atan2( ye, xe ).to_deg
 ra = sun.radec(time).ra.to_deg / 15.0
 dec = Math.atan2( ze, Math.sqrt(xe * xe + ye * ye) ).to_deg
 dec = sun.radec(time).dec.to_deg
-
-p sun.rise_at( el, date, lon, lat )
-p sun.meridian_transit( date, lon )
-p sun.set_at( el, date, lon, lat )
+p "Rise"
+p sun.rise_at( el, date, lon, lat ).localtime
+p "Transit"
+p sun.meridian_transit( date, lon ).localtime
+p "Set"
+p sun.set_at( el, date, lon, lat ).localtime
 
 lst = time.to_lst(lon)
 Sphere.ra_to_ha( ra, lst ).to_deg
 lst.to_deg / 15.0
-p ut = Sphere.lst_to_ut( time, lst, lon )
+ut = Sphere.lst_to_ut( time, lst, lon )
 gmst = Sphere.gmst(ut)
+date = time + 1
+
+moon = Sphere::Moon.new
+p moon.name
+p "Rise"
+p moon.rise_at( 0, date, lon, lat ).localtime
+p "Transit"
+p moon.meridian_transit( date, lon ).localtime
+p "Set"
+p moon.set_at( 0, date, lon, lat ).localtime
 
 jupiter = Sphere::Jupiter.new
-jupiter.name
+p jupiter.name
+p "Rise"
+p jupiter.rise_at( 0, date, lon, lat ).localtime
+p "Transit"
+p jupiter.meridian_transit( date, lon ).localtime
+p "Set"
+p jupiter.set_at( 0, date, lon, lat ).localtime
+
 jupiter.ml(time).to_deg
 jupiter.pnl(time).to_deg
 jupiter.omg(time).to_deg
@@ -96,7 +115,14 @@ jupiter.lambdabeta(time).lambda.to_deg
 jupiter.lambdabeta(time).beta.to_deg
 
 mars = Sphere::Mars.new
-mars.name
+p mars.name
+p "Rise"
+p mars.rise_at( 0, date, lon, lat ).localtime
+p "Transit"
+p mars.meridian_transit( date, lon ).localtime
+p "Set"
+p mars.set_at( 0, date, lon, lat ).localtime
+
 mars.ml(time).to_deg
 mars.pnl(time).to_deg
 mars.omg(time).to_deg
@@ -117,7 +143,14 @@ mars.lambdabeta(time).lambda.to_deg
 mars.lambdabeta(time).beta.to_deg
 
 venus = Sphere::Venus.new
-venus.name
+p venus.name
+p "Rise"
+p venus.rise_at( 0, date, lon, lat ).localtime
+p "Transit"
+p venus.meridian_transit( date, lon ).localtime
+p "Set"
+p venus.set_at( 0, date, lon, lat ).localtime
+
 venus.ml(time).to_deg
 venus.pnl(time).to_deg
 venus.omg(time).to_deg
@@ -136,6 +169,15 @@ venus.xyz(time)
 venus.lambdabeta(time)
 venus.lambdabeta(time).lambda.to_deg
 venus.lambdabeta(time).beta.to_deg
+
+mercury = Sphere::Mercury.new
+p mercury.name
+p "Rise"
+p mercury.rise_at( 0, date, lon, lat ).localtime
+p "Transit"
+p mercury.meridian_transit( date, lon ).localtime
+p "Set"
+p mercury.set_at( 0, date, lon, lat ).localtime
 
 Sphere::GnuPlot.public_methods(false).sort
 Sphere::GnuPlot.public_instance_methods(false).sort

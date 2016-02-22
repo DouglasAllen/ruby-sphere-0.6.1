@@ -1,5 +1,5 @@
 require_relative 'planet'
-require_relative 'sphere'
+#require_relative 'sphere'
 
 module Sphere
   class Mars < Planet
