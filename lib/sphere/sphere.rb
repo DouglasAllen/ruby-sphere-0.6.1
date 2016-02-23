@@ -302,8 +302,10 @@ if __FILE__ == $PROGRAM_NAME
   time = DateTime.now.to_time.utc
 
   lat = 41.94788 * Math::PI / 180
+  lon = -88.743 * Math::PI / 180
   
   p Sphere::jd(time)
-  p Sphere::gmst( time ) * 180 / Math::PI / 15
+  p lst = ( Sphere::gmst( time ) + lon ) % ( 2.0 * Math::PI )
+  p Time.at( time + ( lst - Sphere::lst( time, lon ) ).to_f * Sphere::sidereal_day * 3600.0 * 12.0 / Math::PI )
   
 end
