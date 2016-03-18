@@ -16,8 +16,8 @@ require_relative 'constellations'
 
 def plot( device = nil, output = nil, tz='UTC', location='NIU' )
   
-  start = 12
-  offset = start + 12
+  start = 0
+  offset = start + 16
   tzorig = ENV['TZ']
   ENV['TZ'] = tz
   now = Time.now
@@ -32,17 +32,26 @@ def plot( device = nil, output = nil, tz='UTC', location='NIU' )
              t1, t2, Sphere::Observatory.of( location ) )
 	 )
   
-  # plot.stars << Sphere::Jupiter.new
-  # plot.stars << Sphere::Mars.new
-  # plot.stars << Sphere::Venus.new
-  # plot.stars << Sphere::Mercury.new
-  plot.stars << Sphere::Sun.new
+  plot.stars << Sphere::Star.new('4 36'.hms_to_rad, +16.533.to_rad, 'Aldebaran')
+  plot.stars << Sphere::Star.new('5 15'.hms_to_rad, +-8.183.to_rad, 'Rigel')
+  plot.stars << Sphere::Star.new('5 16'.hms_to_rad, +45.998.to_rad, 'Capella')
+  plot.stars << Sphere::Star.new('5 56'.hms_to_rad, +7.4.to_rad, 'Betelgeuse')
+  plot.stars << Sphere::Star.new('6 45'.hms_to_rad, +-16.733.to_rad, 'Sirius')
+  plot.stars << Sphere::Star.new('7 40'.hms_to_rad, +5.166.to_rad, 'Procyon')
+  plot.stars << Sphere::Star.new('7 45'.hms_to_rad, +28.0262.to_rad, 'Pollux')  
+  
+  # plot.stars << Sphere::Star.new(''.hms_to_rad, +.to_rad, '')
+  plot.stars << Sphere::Jupiter.new
   # plot.stars << Sphere::Moon.new
-#
-#  plot.stars << Sphere::Star.new('18 30'.hms_to_rad, -10.to_rad, 'Scutum')
-#  plot.stars << Sphere::Star.new('18 45'.hms_to_rad, +36.to_rad, 'Lyra')
-#  plot.stars << Sphere::Star.new('19 40'.hms_to_rad, +18.to_rad, 'Sagitta')
-#  plot.stars << Sphere::Star.new('20 30'.hms_to_rad, +43.to_rad, 'Cygnus')
+  # plot.stars << Sphere::Mars.new
+  # plot.stars << Sphere::Saturn.new
+  #plot.stars << Sphere::Mercury.new
+  #plot.stars << Sphere::Sun.new
+  
+
+  
+
+
 #  plot.stars << Sphere::Star.new('20 35'.hms_to_rad, +12.to_rad, 'Delphinus')
 #  
 #  plot.stars << Sphere::Star.new('22  0'.hms_to_rad, +70.to_rad, 'Cepheus')

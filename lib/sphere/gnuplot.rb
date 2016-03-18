@@ -127,11 +127,13 @@ module Sphere
     def multiplot_setups
       header =<<'_END'
 set size 1, 1
-set multiplot
+set terminal png size 1200,800
+set output 'tonight.png'
+#set multiplot
 _END
       footer =<<'_END'
-unset multiplot
-unset size
+#unset multiplot
+#unset size
 _END
       [ header, footer ]
     end
